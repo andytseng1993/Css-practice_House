@@ -7,11 +7,22 @@ body{
     height: 100vh;
     background-image: linear-gradient(245deg,#3e86eb 0%,#add2f2 100%);
 }
+/* .light{
+    position: absolute;
+    width: 47px;
+    height: 53px;
+    left: 216px;
+    top: 188px;
+    background-color: rgba(255, 183, 88, 0.461);
+    box-shadow: -11px 13px 23px 3px rgba(231, 208, 73, 0.49), 1px 14px 23px -5px rgba(231, 208, 73, 0.49) inset;
+    z-index: 1000;
+} */
 .house{
     position: absolute;
     bottom: 10%;
     left: 50%;
     transform: translate(-50%);
+    /* filter: drop-shadow(10px 10px 25px #0000003e) brightness(0.4); */
 }
 .house .first{
    position: relative;
@@ -171,10 +182,10 @@ body{
     background-image:linear-gradient(to bottom,transparent 40%, rgb(26, 26, 0) 40%,#2D0A04 50%,transparent 65%,transparent );
     background-size: 100% 7%;
     box-shadow: inset -9px 3px 0px #7E7977, 
-                inset -5px -1px 0px black;
+                inset -5px -1px 0px black,
+                0.7px 3px 0 white;
     border-radius: 10px;
     z-index: 100;
-    border-bottom: #fff 3px solid;
 }
 
 .house .secondfloor .front{
@@ -185,6 +196,7 @@ body{
     z-index: 150;
     left: 14%;
 }
+
 .house .secondfloor .front.front1{
     left: auto;
     right: 5%;
@@ -203,6 +215,90 @@ body{
     border-left: #2c2c2c 5px solid;
     box-shadow: inset 5px 5px 0px #fff;
 }
+
+.house .secondfloor .front > .window{
+    position: absolute;
+    width: 65px;
+    height: 75px;
+    background-color: #999;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%,-50%);
+    border-radius: 50% 50% 3% 3% / 10% 10% 3% 3%;
+    border: 10px solid #e78f37;
+    box-shadow: inset 3px 3px 8px #0000004d, 5px 3px 4px rgba(0, 0, 0, 0.13);
+}
+.house .secondfloor .front > .window::before{
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 91%;
+    height: 91%;
+    border: #eee 3px solid;
+    border-radius: 3px;
+    background-image: linear-gradient(to right,transparent 49%, rgba(255, 255, 255, 0.8) 49%, rgba(255, 255, 255, 0.8) 52%, transparent 52%),
+    linear-gradient(to top,transparent 40%, #ffffff 45%, rgb(255, 255, 255) 55%, transparent 53%);
+
+
+}
+.house .secondfloor > .window{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 50%;
+    left: 48px;
+    transform: translate(-50%,-50%);
+    background-color: #ccc;
+    border: #e78f37 10px solid;
+    border-radius:3px;
+    box-shadow: inset 3px 3px 8px #0000004d, 5px 3px 4px rgba(0, 0, 0, 0.13);
+}
+.house .secondfloor .window.window2{
+    left: initial;
+    right: 1px;
+}
+.house .secondfloor >.window::before{
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 91%;
+    height: 91%;
+    border: ivory 2px solid;
+    border-radius: 3px;
+    background-image: linear-gradient(to right,transparent 48%, rgb(255, 255, 255) 48%, rgb(255, 255, 255) 52%, transparent 53%),
+    linear-gradient(to top,transparent 47%, rgb(255, 255, 255) 47%, rgb(255, 255, 255) 53%, transparent 53%);
+}
+.house .secondfloor >.bigwindow{
+    position: absolute;
+    top: 50%;
+    left: 39%;
+    width: 70px;
+    height: 55px;
+    transform: translate(-50%,-50%);
+    border-radius: 50% / 15%;
+    background-color: #bbb;
+    border: #e78f37 10px solid;
+    box-shadow: inset 3px 3px 8px #0000004d, 5px 3px 4px rgba(0, 0, 0, 0.13);
+}
+.house .secondfloor .bigwindow1{
+    left: 61%;
+}
+.house .secondfloor > .bigwindow::before{
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 90%;
+    height: 90%;
+    border: ivory 3px solid;
+    border-radius: 3px;
+    background-image: linear-gradient(to right,transparent 48%, rgb(255, 255, 255) 48%, rgb(255, 255, 255) 52%, transparent 54%);
+}
+
+
+
 .house .secondfloor .chimney{
     position: absolute;
     width: 50px;
@@ -223,9 +319,27 @@ body{
     transform: translateX(-50%);
     background: #f5e6d6;
     z-index: -2;
+}
+.house .chimney::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    left: -14%;
     border-top: 20px solid #5A4C3E;
-
-
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+}
+.house .chimney::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 13px;
+    top: -10.5px;
+    border-radius:50% 50% 0 0;
+    box-shadow: 35px 0px 0px #FFECC9;
+    background-color: #FFECC9;
+    transform: scaleY(0.6);
 }
 .house .chimney.right{
     left: auto;
