@@ -24,6 +24,9 @@ body{
     transform: translate(-50%);
     /* filter: drop-shadow(10px 10px 25px #0000003e) brightness(0.4); */
 }
+
+/* First floor */
+
 .house .first{
    position: relative;
 }
@@ -34,6 +37,7 @@ body{
     background: #eee;
     left: 50%;
     transform: translate(-50%);
+    
 }
 .house .first .main{
     position: absolute;
@@ -54,6 +58,10 @@ body{
     height: 60px;
     background: #d8b280;
     transform: skewX(320deg);
+    background-image: linear-gradient(to top,transparent 40%,rgb(0, 0, 0,0.7) 47%,rgb(0, 0, 0,0.7) 55%,transparent 57%);
+    background-size: 100% 6px;
+    box-shadow: 6px 0px 0px rgba(135, 76, 0, 0.83) inset;
+    border-left:rgba(255, 252, 229, 0.66) 3px solid;
 }
 .house .first .main::after{
     content: '';
@@ -64,6 +72,10 @@ body{
     height: 60px;
     background: #d8b280;
     transform: skewX(40deg);
+    background-image: linear-gradient(to top,transparent 40%,rgb(0, 0, 0,0.7) 47%,rgb(0, 0, 0,0.7) 55%,transparent 57%);
+    background-size: 100% 6px;
+    box-shadow: -6px 0px 0px rgba(135, 76, 0, 0.83) inset;
+    border-right: rgba(255, 252, 229, 0.66) 3px solid;
 }
 
 .house .first .leftside{
@@ -84,6 +96,10 @@ body{
     height: 55px;
     background: #d8b280;
     transform: skewX(330deg);
+    background-image: linear-gradient(to top,transparent 40%,rgb(0, 0, 0,0.7) 47%,rgb(0, 0, 0,0.7) 55%,transparent 57%);
+    background-size: 100% 6px;
+    box-shadow: 6px 0px 0px rgba(135, 76, 0, 0.83) inset;
+    border-left:rgba(255, 252, 229, 0.66) 3px solid;
 }
 .house .first .leftside::after{
     content: '';
@@ -94,6 +110,11 @@ body{
     height: 55px;
     background: #d8b280;
     transform: skewX(45deg);
+    background-image: linear-gradient(to top,transparent 40%,rgb(0, 0, 0) 47%,rgb(0, 0, 0) 55%,transparent 57%);
+    background-size: 100% 6px;
+    box-shadow: -6px 0px 0px rgba(135, 76, 0, 0.83) inset;
+    border-right: rgba(255, 252, 229, 0.66) 3px solid;
+    
 }
 .house .first .rightside{
     position: absolute;
@@ -109,21 +130,67 @@ body{
     content: '';
     position: absolute;
     top: -55px;
-    left: 9%;
-    width: 60%;
-    height: 55px;
-    background: #d8b280;
-    transform: skewX(315deg);
-}
-.house .first .rightside::after{
-    content: '';
-    position: absolute;
-    top: -55px;
     right: 0%;
     width: 60%;
     height: 55px;
     background: #d8b280;
     transform: skewX(30deg);
+    background-image: linear-gradient(to top,transparent 40%,rgb(0, 0, 0) 40%,rgb(0, 0, 0) 55%,transparent 57%);
+    background-size: 100% 6px;
+    box-shadow: -6px 0px 0px rgba(135, 76, 0, 0.83) inset;
+    border-right: rgba(255, 252, 229, 0.66) 3px solid;
+}
+.house .first .rightside::after{
+    content: '';
+    position: absolute;
+    top: -55px;
+    left: 9%;
+    width: 60%;
+    height: 55px;
+    background: #d8b280;
+    transform: skewX(315deg);
+    background-image: linear-gradient(to top,transparent 40%,rgb(0, 0, 0) 40%,rgb(0, 0, 0) 55%,transparent 57%);
+    background-size: 100% 6px;
+    box-shadow: 6px 0px 0px rgba(135, 76, 0, 0.83) inset;
+    border-left:rgba(255, 252, 229, 0.66) 3px solid;
+}
+.house .first .door{
+    position: absolute;
+    width: 60px;
+    height: 100px;
+    bottom: 0;
+    left: 24%;
+    background-color: rgb(140, 64, 64);
+    border-radius: 3px;
+    z-index: 100;
+}
+.house .first .door::before{
+    position: absolute;
+    content: '';
+    top: 23%;
+    left: 13%;
+    width: 74%;
+    height: 75%;
+    background-color: rgb(230, 230, 230);
+    background-image: linear-gradient(to left, #fff 20%, transparent 20%, transparent  75%, #fff 75%),
+    linear-gradient(to bottom, #fff 15%, transparent 15%, transparent  85%, #fff 85%);
+    background-size: 50% 50%;
+    border-radius: 2px;
+}
+.house .first .door::after{
+    position: absolute;
+    content: '';
+    top: 5%;
+    left: 13%;
+    width: 70%;
+    height: 10%;
+    background-image: linear-gradient(to right, #523838 45%, #eee 45%, #eee 50%, #523838 50%);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 45% / 50% 50% 0% 0%;
+    background-size: 33% 100%;
+}
+.house .first .door2{
+    left: 67.5%;
 }
 
 .house .firstroof{
@@ -134,10 +201,51 @@ body{
     left: 50%;
     transform: translate(-50%);
     background: #D7B890;
+    background-image: linear-gradient(to top,transparent 40%,rgb(0, 0, 0) 47%,rgb(0, 0, 0) 55%,transparent 57%);
+    background-size: 100% 6px;
+}
+
+.first .bigwindow{
+    position: absolute;
+    width: 110px;
+    height: 80px;
+    background-color: #bbb;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 15px solid #e78f37;
+    border-radius: 50% / 15%;
+    box-shadow: inset 3px 3px 8px #0000004d, 5px 3px 4px rgba(0, 0, 0, 0.13);
+}
+.first .bigwindow1{
+    width: 140px;
+    height: 90px;
+    border: 15px solid #e78f37;
+    background-color: rgb(225, 225, 225);
+}
+.first .bigwindow::after{
+    content: '';
+    position: absolute;
+    border: 3px solid #fff;
+    width: 100%;
+    height: 100%;
+    top: -3px;
+    left: -3px;
+    border-radius: 3px;
+    background-image: linear-gradient(to left, transparent 48%,#fff 48%, #fff 52%, transparent 52%);
+}
+.first .bigwindow1::before{
+    content: '';
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    left: 5%;
+    background-color: rgb(155, 141, 141);
+    border-radius:10% 0% 13% 19% / 0% 4% 95% 100%;
 }
 
 
-
+/* Second floor */
 
 .house .secondfloor{
     position: relative;
@@ -270,7 +378,7 @@ body{
     background-image: linear-gradient(to right,transparent 48%, rgb(255, 255, 255) 48%, rgb(255, 255, 255) 52%, transparent 53%),
     linear-gradient(to top,transparent 47%, rgb(255, 255, 255) 47%, rgb(255, 255, 255) 53%, transparent 53%);
 }
-.house .secondfloor >.bigwindow{
+.house .secondfloor >.midwindow{
     position: absolute;
     top: 50%;
     left: 39%;
@@ -282,10 +390,10 @@ body{
     border: #e78f37 10px solid;
     box-shadow: inset 3px 3px 8px #0000004d, 5px 3px 4px rgba(0, 0, 0, 0.13);
 }
-.house .secondfloor .bigwindow1{
+.house .secondfloor .midwindow1{
     left: 61%;
 }
-.house .secondfloor > .bigwindow::before{
+.house .secondfloor > .midwindow::before{
     content: '';
     position: absolute;
     top: -1px;
@@ -296,9 +404,6 @@ body{
     border-radius: 3px;
     background-image: linear-gradient(to right,transparent 48%, rgb(255, 255, 255) 48%, rgb(255, 255, 255) 52%, transparent 54%);
 }
-
-
-
 .house .secondfloor .chimney{
     position: absolute;
     width: 50px;
