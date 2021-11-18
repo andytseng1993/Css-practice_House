@@ -6,9 +6,12 @@
 body{
     height: 100vh;
     background-image: linear-gradient(245deg,#3e86eb 0%,#add2f2 100%);
+    overflow: hidden;
+}
+.landscape *, .landscape *::after,.landscape *::before{
+    position: absolute;
 }
 /* .light{
-    position: absolute;
     width: 47px;
     height: 53px;
     left: 216px;
@@ -18,11 +21,11 @@ body{
     z-index: 1000;
 } */
 .house{
-    position: absolute;
-    bottom: 10%;
+    bottom: 185px;
     left: 50%;
     transform: translate(-50%);
     /* filter: drop-shadow(10px 10px 25px #0000003e) brightness(0.4); */
+    z-index: 50;
 }
 
 /* First floor */
@@ -40,7 +43,6 @@ body{
     
 }
 .house .first .main{
-    position: absolute;
     width: 200px;
     height: 120px;
     background: rgb(255, 255, 255);
@@ -51,7 +53,6 @@ body{
 }
 .house .first .main::before{
     content: '';
-    position: absolute;
     top: -60px;
     left: 2.5%;
     width: 60%;
@@ -65,7 +66,6 @@ body{
 }
 .house .first .main::after{
     content: '';
-    position: absolute;
     top: -60px;
     right: 2.5%;
     width: 60%;
@@ -79,7 +79,6 @@ body{
 }
 
 .house .first .leftside{
-    position: absolute;
     width: 150px;
     height: 120px;
     background: rgb(255, 255, 255);
@@ -89,7 +88,6 @@ body{
 }
 .house .first .leftside::before{
     content: '';
-    position: absolute;
     top: -55px;
     left: 0%;
     width: 60%;
@@ -103,7 +101,6 @@ body{
 }
 .house .first .leftside::after{
     content: '';
-    position: absolute;
     top: -55px;
     right: 9%;
     width: 60%;
@@ -117,7 +114,6 @@ body{
     
 }
 .house .first .rightside{
-    position: absolute;
     width: 150px;
     height: 120px;
     background: rgb(255, 255, 255);
@@ -128,7 +124,6 @@ body{
 }
 .house .first .rightside::before{
     content: '';
-    position: absolute;
     top: -55px;
     right: 0%;
     width: 60%;
@@ -142,7 +137,6 @@ body{
 }
 .house .first .rightside::after{
     content: '';
-    position: absolute;
     top: -55px;
     left: 9%;
     width: 60%;
@@ -155,7 +149,6 @@ body{
     border-left:rgba(255, 252, 229, 0.66) 3px solid;
 }
 .house .first .door{
-    position: absolute;
     width: 60px;
     height: 100px;
     bottom: 0;
@@ -165,7 +158,6 @@ body{
     z-index: 100;
 }
 .house .first .door::before{
-    position: absolute;
     content: '';
     top: 23%;
     left: 13%;
@@ -178,7 +170,6 @@ body{
     border-radius: 2px;
 }
 .house .first .door::after{
-    position: absolute;
     content: '';
     top: 5%;
     left: 13%;
@@ -206,7 +197,6 @@ body{
 }
 
 .first .bigwindow{
-    position: absolute;
     width: 110px;
     height: 80px;
     background-color: #bbb;
@@ -225,7 +215,6 @@ body{
 }
 .first .bigwindow::after{
     content: '';
-    position: absolute;
     border: 3px solid #fff;
     width: 100%;
     height: 100%;
@@ -236,7 +225,6 @@ body{
 }
 .first .bigwindow1::before{
     content: '';
-    position: absolute;
     width: 85%;
     height: 100%;
     left: 5%;
@@ -263,7 +251,6 @@ body{
 }
 .house .secondroof:before{
     content: '';
-    position: absolute;
     top: 0;
     left: 6%;
     width: 60%;
@@ -280,7 +267,6 @@ body{
 }
 .house .secondroof:after{
     content: '';
-    position: absolute;
     top: 0;
     right: 6%;
     width: 55%;
@@ -297,10 +283,9 @@ body{
 }
 
 .house .secondfloor .front{
-    position: absolute;
     width: 120px;
     height: 90px;
-    background-color: #f7d7b7;
+    background-color: #fff9f4;
     z-index: 150;
     left: 14%;
 }
@@ -312,12 +297,11 @@ body{
 }
 .house .secondfloor .front:before{
     content: '';
-    position: absolute;
     width: 74px;
     height: 66px;
     top: -38px;
     left: 21px;
-    background-color: #f7d7b7;
+    background-color: #fff9f4;
     transform: rotate(31deg) skew(-29deg);
     border-top: #2c2c2c 5px solid;
     border-left: #2c2c2c 5px solid;
@@ -325,7 +309,6 @@ body{
 }
 
 .house .secondfloor .front > .window{
-    position: absolute;
     width: 65px;
     height: 75px;
     background-color: #999;
@@ -338,7 +321,6 @@ body{
 }
 .house .secondfloor .front > .window::before{
     content: '';
-    position: absolute;
     top: -1px;
     left: -1px;
     width: 91%;
@@ -351,7 +333,6 @@ body{
 
 }
 .house .secondfloor > .window{
-    position: absolute;
     width: 45px;
     height: 45px;
     top: 50%;
@@ -368,7 +349,6 @@ body{
 }
 .house .secondfloor >.window::before{
     content: '';
-    position: absolute;
     top: -1px;
     left: -1px;
     width: 91%;
@@ -379,7 +359,6 @@ body{
     linear-gradient(to top,transparent 47%, rgb(255, 255, 255) 47%, rgb(255, 255, 255) 53%, transparent 53%);
 }
 .house .secondfloor >.midwindow{
-    position: absolute;
     top: 50%;
     left: 39%;
     width: 70px;
@@ -395,7 +374,6 @@ body{
 }
 .house .secondfloor > .midwindow::before{
     content: '';
-    position: absolute;
     top: -1px;
     left: -1px;
     width: 90%;
@@ -405,7 +383,6 @@ body{
     background-image: linear-gradient(to right,transparent 48%, rgb(255, 255, 255) 48%, rgb(255, 255, 255) 52%, transparent 54%);
 }
 .house .secondfloor .chimney{
-    position: absolute;
     width: 50px;
     height: 180px;
     top: -90px;
@@ -416,7 +393,6 @@ body{
 }
 .house .chimney{
     box-sizing: border-box;
-    position: absolute;
     width: 50px;
     height: 350px;
     bottom: 0px;
@@ -427,7 +403,6 @@ body{
 }
 .house .chimney::before{
     content: '';
-    position: absolute;
     width: 100%;
     height: 20px;
     left: -14%;
@@ -437,7 +412,6 @@ body{
 }
 .house .chimney::after{
     content: '';
-    position: absolute;
     width: 15px;
     height: 13px;
     top: -10.5px;
@@ -450,4 +424,202 @@ body{
     left: auto;
     right: -7%;
     z-index: -5;
+}
+
+/* Foreyard */
+.foreyard{
+    left: 50%;
+    bottom: 205px;
+}
+.foreyard .path{
+    left: -210px;
+    top: 20px;
+    width: 477px;
+    height: 65px;
+    background-color: #f5e4c2;
+    border-top: #6a5c48 5px solid;
+    border-bottom: #ac9573 4px solid;
+    z-index: 30;
+}
+.foreyard .wall{
+    top: -9px;
+    width: 210px;
+    height: 95px;
+    transform: translate(-50%);
+    background-image: 
+    linear-gradient(to top,transparent 40%, #FEEEB5 40%, #FEEEB5 50%,transparent 50%,transparent),
+    linear-gradient(to left, #FEEEB5 5%, transparent 5%,transparent),
+    linear-gradient(to top,transparent 50%, #F7D3A4 50%, #F7D3A4 90%,#FEEEB5 90%),
+    linear-gradient(to right,transparent 45%,#FEEEB5 45%, #FEEEB5 55%, transparent 55%),
+    linear-gradient(to bottom,transparent 50%, #F7D3A4 50%, #F7D3A4 100% ),
+    linear-gradient(to right,#F7D3A4 45%, transparent 45%, transparent 100%);
+    background-size: 40px 20px;
+    border-top: 5px solid #5C544A;
+}
+.foreyard .wall1::before,
+.foreyard .wall1::after{
+    content: '';
+    height: 96%;
+    width: 16%;
+    right: 132%;
+    transform: translate(-50%);
+    bottom: 1px;
+    background-image: 
+    linear-gradient(to top,transparent 40%, #FEEEB5 40%, #FEEEB5 50%,transparent 50%,transparent),
+    linear-gradient(to left, #FEEEB5 5%, transparent 5%,transparent),
+    linear-gradient(to top,transparent 50%, #F7D3A4 50%, #F7D3A4 90%,#FEEEB5 90%),
+    linear-gradient(to right,transparent 45%,#FEEEB5 45%, #FEEEB5 55%, transparent 55%),
+    linear-gradient(to bottom,transparent 50%, #F7D3A4 50%, #F7D3A4 100% ),
+    linear-gradient(to right,#F7D3A4 45%, transparent 45%, transparent 100%);
+    background-size: 35px 28px;
+    background-position: 0px 14px;
+    filter: brightness(0.95);
+    border-top: 15px double #5C544A;
+    
+}
+.foreyard .wall1::after{
+    content: '';
+    right: initial;
+    left: 148%;
+    bottom: 0px;
+    background-size: 35px 33px;
+    background-position: 0px 17px;
+}
+.foreyard .wall.wall1{
+    z-index: 75;
+    background-position:1px 13px ;
+    background-size: 35px 25px;
+}
+
+.foreyard .wall2{
+    top: 1px;
+    width: 180px;
+    right: 189px;
+    z-index: 50;
+    background-position: 19px 0px;
+}
+.foreyard .wall2::before,
+.foreyard .wall3::before{
+    content: '';
+    height: 100%;
+    width: 33%;
+    left: 100%;
+    bottom: 6px;
+    transform: skewY(-11deg);
+    background-image: 
+    linear-gradient(to top,transparent 40%, #FEEEB5 40%, #FEEEB5 50%,transparent 50%,transparent),
+    linear-gradient(to left, #FEEEB5 5%, transparent 5%,transparent),
+    linear-gradient(to top,transparent 50%, #F7D3A4 50%, #F7D3A4 90%,#FEEEB5 90%),
+    linear-gradient(to right,transparent 45%,#FEEEB5 45%, #FEEEB5 55%, transparent 55%),
+    linear-gradient(to bottom,transparent 50%, #F7D3A4 50%, #F7D3A4 100% ),
+    linear-gradient(to right,#F7D3A4 45%, transparent 45%, transparent 100%);
+    background-size: 28px 20px;
+    border-top: 5px solid #5C544A;
+}
+.foreyard .wall2::after,
+.foreyard .wall3::after{
+    content: '';
+    height: 96%;
+    width: 22%;
+    right: 100%;
+    transform: translate(50%);
+    bottom: -1px;
+    background-image: 
+    linear-gradient(to top,transparent 40%, #FEEEB5 40%, #FEEEB5 50%,transparent 50%,transparent),
+    linear-gradient(to left, #FEEEB5 5%, transparent 5%,transparent),
+    linear-gradient(to top,transparent 50%, #F7D3A4 50%, #F7D3A4 90%,#FEEEB5 90%),
+    linear-gradient(to right,transparent 45%,#FEEEB5 45%, #FEEEB5 55%, transparent 55%),
+    linear-gradient(to bottom,transparent 50%, #F7D3A4 50%, #F7D3A4 100% ),
+    linear-gradient(to right,#F7D3A4 45%, transparent 45%, transparent 100%);
+    background-size: 39px 33px;
+    background-position: 1px 1px;
+    filter: brightness(0.95);
+    border-top: 15px double #5C544A;
+}
+.foreyard .wall3{
+    width: 180px;
+    top: 0px;
+    left: 370px;
+    z-index: 50;
+    background-position: 2px 0px;
+}
+.foreyard .wall3::before{
+    left: initial;
+    right: 100%;
+    bottom: 5px;
+    transform: skewY(9deg);
+    background-position: 4px 0px;
+}
+.foreyard .wall3::after{
+    content: '';
+    height: 96%;
+    right: initial;
+    left: 95%;
+    transform: translate(-50%);
+    bottom: 0px;
+    background-size: 38px 31px;
+    background-position: 2px -9px;
+}
+
+.foreyard .wall4{
+    width: 119px;
+    height: 101px;
+    left: 334px;
+    top: -29px;
+    background-color: rgb(160, 157, 157);
+    transform: skew(25deg) rotate(25deg);
+    z-index: -50;
+    filter: brightness(0.8);
+}
+
+.foreyard .entry{
+    width: 84px;
+    height: 120px;
+    right: 105px;
+    top: -31px;
+    background-color: transparent;
+    border: #7A776D 4px solid;
+    border-radius: 50% 50% 0% 0% / 25% 25% 0% 0%;
+    background-image: linear-gradient(to left,transparent 40%, #7A776D 40%,#7A776D 60%,transparent 60%,transparent );
+    background-size: 15px 100%;
+    z-index: 75;
+}
+.foreyard .entry1{
+    transform: rotateX(-13deg) rotateY(-35deg);
+    transform-origin:left bottom;
+}
+.foreyard .entry2{
+    left: 105px;
+
+} 
+.foreyard .wall5{
+    width: 119px;
+    height: 101px;
+    right: 334px;
+    top: -29px;
+    background-color: rgb(160, 157, 157);
+    transform: skew(-25deg) rotate(-25deg);
+    z-index: -50;
+    filter: brightness(0.8);
+}
+
+.yard{
+    left: 50%;
+    bottom: 125px;
+}
+.yard .path{
+    width: 95px;
+    height: 150px;
+    right: 98px;
+    background-color: #f5e4c2;
+    border-radius: 10% 14% 0% 0% / 100% 100% 0% 0%;
+}
+.yard .path2{
+    width: 83px;
+
+    right: inherit;
+    left: 145px;
+    border-radius: 0%;
+    transform: skew(28deg) rotate(-4deg);
+
 }
