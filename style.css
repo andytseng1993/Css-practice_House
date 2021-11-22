@@ -5,7 +5,7 @@
 }
 body{
     height: 100vh;
-    background-image: linear-gradient(245deg,#3e86eb 0%,#add2f2 100%);
+    background-image: linear-gradient(245deg,#5C97E7 0%,#B1D7F6 100%);
     overflow: hidden;
 }
 .landscape *, .landscape *::after,.landscape *::before{
@@ -636,6 +636,11 @@ body{
     left: 50%;
     bottom: 50px;
 }
+.grass1{
+    bottom: 24px;
+    left: -60px;
+    filter: drop-shadow(150px 10px 0px rgb(42, 138, 77));
+}
 .grass1 .part1{
     width: 6px;
     height: 10px;
@@ -667,16 +672,58 @@ body{
 .grass1 .part1.part2{
     transform: rotateY(180deg);
     left: 25px;
+    
 }
 .grass2{
     left: 300px;
     bottom: 20px;
+    filter: hue-rotate(5deg);
+    filter: drop-shadow(250px -30px 0px rgb(12, 112, 40));
+}
+.grass3{
+    left: 375px;
+    bottom: -20px;
     filter: hue-rotate(48deg);
+    filter: drop-shadow(-50px 15px 0px rgb(26, 94, 46));
+}
+.grass4{
+    left: -375px;
+    bottom: 5px;
+    filter: hue-rotate(10deg);
+    filter: drop-shadow(130px -20px 0px rgb(20, 131, 54));
+}
+.grass5{
+    left: -450px;
+    bottom: -20px;
+    filter: hue-rotate(70deg);
+    filter: drop-shadow(170px 20px 0px rgb(20, 131, 54));
+}
+.grass6{
+    left: -500px;
+    bottom:  20px;
+    filter: hue-rotate(50deg);
+    filter: drop-shadow(-100px 20px 0px rgb(20, 131, 54));
+}
+.grass7{
+    left: 400px;
+    bottom: 40px;
+    filter: hue-rotate(100deg);
+    filter: drop-shadow(90px 50px 0px rgb(20, 131, 54));
+}
+.grass8{
+    left: 10px;
+    bottom:  -5px;
+    filter: hue-rotate(20deg);
+    filter: drop-shadow(-100px 20px 0px rgb(26, 94, 46));
 }
 
 .bush{
-    left: 55px;
-    bottom: 78px;
+    left: 50%;
+    bottom: 70px;
+}
+.bush1{
+    left: 20px;
+    bottom: 35px;
     width: 49px;
     height: 63px;
     background-color: rgb(6, 144, 65);
@@ -685,7 +732,7 @@ body{
     border: 3px solid rgb(4, 124, 55);
     border-bottom: 4px solid rgb(4, 124, 55);
 }
-.bush::before{
+.bush1::before{
     content: '';
     right: 67%;
     bottom: -4px;
@@ -698,7 +745,7 @@ body{
     border-left: 3px solid rgb(4, 124, 55);
     border-bottom: 3px solid rgb(4, 124, 55);
 }
-.bush::after{
+.bush1::after{
     content: '';
     left: 50%;
     bottom: -4px;
@@ -740,17 +787,58 @@ body{
     transform: rotate(-39deg);
     border-radius: 0% 100% 100% 0% / 100% 100% 0% 0% ;
 }
-.bush.bush2{
-    left: 140px;
-    bottom: 65px;
+.bush1.bush2{
+    left: -500px;
+    bottom: 20px;
     width: 60px;
-    height: 80px;
+    height: 85px;
 }
-
-.bush.bush3{
-    left: 250px;
-    bottom: 110px;
+.bush1.bush3{
+    left: -270px;
+    bottom: 35px;
     width: 40px;
     height: 50px;
-    transform: rotate(-5deg);
+    transform: rotate(-8deg);
+}
+.bush1.bush4{
+    left: 220px;
+    bottom: 40px;
+    width: 40px;
+    height: 55px;
+    transform: rotate(4deg);
+}
+.bush1.bush5{
+    left: 410px;
+    bottom: 30px;
+    width: 50px;
+    height: 70px;
+}
+.bush1.bush6{
+    left: 300px;
+    bottom: 25px;
+    width: 60px;
+    height: 65px;
+    filter: hue-rotate(10deg);
+}
+.bush1.bush7{
+    left: -80px;
+    bottom: 35px;
+    width: 55px;
+    height: 75px;
+    filter: hue-rotate(-20deg);
+}
+.bush1.bush8{
+    left: -335px;
+    bottom: 25px;
+    width: 45px;
+    height: 60px;
+    filter: hue-rotate(-10deg);
+}
+.bush1.bush9{
+    left: -400px;
+    bottom: 25px;
+    width: 50px;
+    height: 70px;
+    filter: hue-rotate(10deg);
+    transform: rotate(3deg);
 }
