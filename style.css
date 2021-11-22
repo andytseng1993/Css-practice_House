@@ -57,7 +57,7 @@ body{
     left: 2.5%;
     width: 60%;
     height: 60px;
-    background: #d8b280;
+    background: #676d88;
     transform: skewX(320deg);
     background-image: linear-gradient(to top,transparent 40%,rgb(0, 0, 0,0.7) 47%,rgb(0, 0, 0,0.7) 55%,transparent 57%);
     background-size: 100% 6px;
@@ -70,7 +70,7 @@ body{
     right: 2.5%;
     width: 60%;
     height: 60px;
-    background: #d8b280;
+    background: #676d88;
     transform: skewX(40deg);
     background-image: linear-gradient(to top,transparent 40%,rgb(0, 0, 0,0.7) 47%,rgb(0, 0, 0,0.7) 55%,transparent 57%);
     background-size: 100% 6px;
@@ -92,7 +92,7 @@ body{
     left: 0%;
     width: 60%;
     height: 55px;
-    background: #d8b280;
+    background: #676d88;
     transform: skewX(330deg);
     background-image: linear-gradient(to top,transparent 40%,rgb(0, 0, 0,0.7) 47%,rgb(0, 0, 0,0.7) 55%,transparent 57%);
     background-size: 100% 6px;
@@ -105,7 +105,7 @@ body{
     right: 9%;
     width: 60%;
     height: 55px;
-    background: #d8b280;
+    background: #676d88;
     transform: skewX(45deg);
     background-image: linear-gradient(to top,transparent 40%,rgb(0, 0, 0) 47%,rgb(0, 0, 0) 55%,transparent 57%);
     background-size: 100% 6px;
@@ -128,7 +128,7 @@ body{
     right: 0%;
     width: 60%;
     height: 55px;
-    background: #d8b280;
+    background: #676d88;
     transform: skewX(30deg);
     background-image: linear-gradient(to top,transparent 40%,rgb(0, 0, 0) 40%,rgb(0, 0, 0) 55%,transparent 57%);
     background-size: 100% 6px;
@@ -141,7 +141,7 @@ body{
     left: 9%;
     width: 60%;
     height: 55px;
-    background: #d8b280;
+    background: #676d88;
     transform: skewX(315deg);
     background-image: linear-gradient(to top,transparent 40%,rgb(0, 0, 0) 40%,rgb(0, 0, 0) 55%,transparent 57%);
     background-size: 100% 6px;
@@ -191,7 +191,7 @@ body{
     top: 0px;
     left: 50%;
     transform: translate(-50%);
-    background: #D7B890;
+    background: #676d88;
     background-image: linear-gradient(to top,transparent 40%,rgb(0, 0, 0) 47%,rgb(0, 0, 0) 55%,transparent 57%);
     background-size: 100% 6px;
 }
@@ -203,14 +203,14 @@ body{
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    border: 15px solid #e78f37;
+    border: 15px solid #bd917f;
     border-radius: 50% / 15%;
     box-shadow: inset 3px 3px 8px #0000004d, 5px 3px 4px rgba(0, 0, 0, 0.13);
 }
 .first .bigwindow1{
     width: 140px;
     height: 90px;
-    border: 15px solid #e78f37;
+    border: 15px solid #bd917f;
     background-color: rgb(225, 225, 225);
 }
 .first .bigwindow::after{
@@ -255,7 +255,7 @@ body{
     left: 6%;
     width: 60%;
     height: 100%;
-    background: #D7B890;
+    background: #676d88;
     transform: skewX(295deg);
     background-image: linear-gradient(to bottom,transparent 40%, rgb(26, 26, 0) 40%,#2D0A04 50%,transparent 65%,transparent );
     background-size: 100% 7%;
@@ -271,7 +271,7 @@ body{
     right: 6%;
     width: 55%;
     height: 100%;
-    background: #D7B890;
+    background: #676d88;
     transform: skewX(65deg);
     background-image:linear-gradient(to bottom,transparent 40%, rgb(26, 26, 0) 40%,#2D0A04 50%,transparent 65%,transparent );
     background-size: 100% 7%;
@@ -297,15 +297,17 @@ body{
 }
 .house .secondfloor .front:before{
     content: '';
-    width: 74px;
+    width: 69px;
     height: 66px;
-    top: -38px;
+    top: -37px;
     left: 21px;
     background-color: #fff9f4;
-    transform: rotate(31deg) skew(-29deg);
-    border-top: #2c2c2c 5px solid;
-    border-left: #2c2c2c 5px solid;
+    transform: rotate(32deg) skew(-29deg);
+    border: transparent 2px solid;
+    border-top: #574343 5px solid;
+    border-left: #2c2c2c 6px solid;
     box-shadow: inset 5px 5px 0px #fff;
+    border-radius: 6px;
 }
 
 .house .secondfloor .front > .window{
@@ -316,7 +318,7 @@ body{
     top: 45%;
     transform: translate(-50%,-50%);
     border-radius: 50% 50% 3% 3% / 10% 10% 3% 3%;
-    border: 10px solid #e78f37;
+    border: 10px solid #a63102;
     box-shadow: inset 3px 3px 8px #0000004d, 5px 3px 4px rgba(0, 0, 0, 0.13);
 }
 .house .secondfloor .front > .window::before{
@@ -339,7 +341,7 @@ body{
     left: 48px;
     transform: translate(-50%,-50%);
     background-color: #ccc;
-    border: #e78f37 10px solid;
+    border: #bd917f 10px solid;
     border-radius:3px;
     box-shadow: inset 3px 3px 8px #0000004d, 5px 3px 4px rgba(0, 0, 0, 0.13);
 }
@@ -366,7 +368,7 @@ body{
     transform: translate(-50%,-50%);
     border-radius: 50% / 15%;
     background-color: #bbb;
-    border: #e78f37 10px solid;
+    border: #bd917f 10px solid;
     box-shadow: inset 3px 3px 8px #0000004d, 5px 3px 4px rgba(0, 0, 0, 0.13);
 }
 .house .secondfloor .midwindow1{
@@ -388,7 +390,7 @@ body{
     top: -90px;
     left: 50%;
     transform: translateX(-50%);
-    background: #f5e6d6;
+    background: #e1e3ec;
     z-index: 150;
 }
 .house .chimney{
@@ -398,7 +400,7 @@ body{
     bottom: 0px;
     left: -1%;
     transform: translateX(-50%);
-    background: #f5e6d6;
+    background: #e1e3ec;
     z-index: -2;
 }
 .house .chimney::before{
@@ -475,7 +477,7 @@ body{
     background-position: 0px 14px;
     filter: brightness(0.95);
     border-top: 15px double #5C544A;
-    
+    border-radius: 2px 2px 0 0;
 }
 .foreyard .wall1::after{
     content: '';
@@ -489,6 +491,7 @@ body{
     z-index: 75;
     background-position:1px 13px ;
     background-size: 35px 25px;
+    border-radius: 2px 2px 0 0;
 }
 
 .foreyard .wall2{
@@ -535,6 +538,7 @@ body{
     background-position: 1px 1px;
     filter: brightness(0.95);
     border-top: 15px double #5C544A;
+    border-radius: 2px 2px 0 0;
 }
 .foreyard .wall3{
     width: 180px;
@@ -608,18 +612,145 @@ body{
     bottom: 125px;
 }
 .yard .path{
-    width: 95px;
+    width: 97px;
     height: 150px;
-    right: 98px;
+    right: 96px;
     background-color: #f5e4c2;
     border-radius: 10% 14% 0% 0% / 100% 100% 0% 0%;
+    z-index: 10;
 }
 .yard .path2{
     width: 83px;
-
     right: inherit;
     left: 145px;
     border-radius: 0%;
     transform: skew(28deg) rotate(-4deg);
+}
+.lawn{
+    width: 100vw;
+    height: 150px;
+    bottom: 0;
+    background-color: #9cb52b;
+}
+.grass{
+    left: 50%;
+    bottom: 50px;
+}
+.grass1 .part1{
+    width: 6px;
+    height: 10px;
+    background-color: transparent;
+    z-index: 50;
+    border-radius: 28% 76% 0% 0% / 0% 100% 0% 0% ;
+    border-right: 1px solid rgb(24, 121, 35);
+    box-shadow: rgb(24, 121, 35) 2px 0px 0px 0px;
+}
+.grass1 .part1::before{
+    content: '';
+    height: 140%;
+    width: 70%;
+    left: 8px;
+    bottom: 0;
+    background-color: rgb(20, 125, 33);
+    border-radius: 0% 100% 100% 0% / 100% 100% 0% 0% ;
+}
+.grass1 .part1::after{
+    content: '';
+    height: 170%;
+    width: 70%;
+    left: 9px;
+    bottom: 0;
+    background-color: transparent;
+    border-right: 4px solid rgb(20, 125, 33);
+    border-radius: 13% 87% 100% 0% / 100% 100% 0% 0% ;
+}
+.grass1 .part1.part2{
+    transform: rotateY(180deg);
+    left: 25px;
+}
+.grass2{
+    left: 300px;
+    bottom: 20px;
+    filter: hue-rotate(48deg);
+}
 
+.bush{
+    left: 55px;
+    bottom: 78px;
+    width: 49px;
+    height: 63px;
+    background-color: rgb(6, 144, 65);
+    border-radius: 63% 67% 57% 55% / 86% 79% 46% 39%;
+    z-index: 150;
+    border: 3px solid rgb(4, 124, 55);
+    border-bottom: 4px solid rgb(4, 124, 55);
+}
+.bush::before{
+    content: '';
+    right: 67%;
+    bottom: -4px;
+    width: 55%;
+    height: 45%;
+    background-color: rgb(6, 144, 65);
+    border-radius: 30% 73% 4% 89% / 28% 91% 0% 76%;
+    border-right: 2px solid transparent;
+    border-top: 3px solid rgb(4, 124, 55);
+    border-left: 3px solid rgb(4, 124, 55);
+    border-bottom: 3px solid rgb(4, 124, 55);
+}
+.bush::after{
+    content: '';
+    left: 50%;
+    bottom: -4px;
+    width: 80%;
+    height: 60%;
+    background-color: rgb(6, 144, 65);
+    border-radius: 63% 37% 69% 0% / 100% 36% 64% 0% ;
+    border-right: 3px solid rgb(4, 124, 55);
+    border-bottom: 3px solid rgb(4, 124, 55);
+}
+.branch{
+    width: 4px;
+    height: 85%;
+    left: 40%;
+    bottom: -15%;
+    background-color: #111;
+    border-radius: 100% 0% 100% 0% / 100% 100% 0% 0%;
+    z-index: 70;
+ 
+}
+.branch::before{
+    content: '';
+    bottom: 15px;
+    left: initial;
+    width: 4px;
+    height: 55%;
+    background-color: #111;
+    transform-origin: bottom;
+    transform: rotate(46deg);
+    border-radius: 0% 100% 100% 0% / 100% 100% 0% 0% ;
+}
+.branch::after{
+    content: '';
+    bottom: 5px;
+    width: 3px;
+    height: 45%;
+    background-color: #111;
+    transform-origin: bottom;
+    transform: rotate(-39deg);
+    border-radius: 0% 100% 100% 0% / 100% 100% 0% 0% ;
+}
+.bush.bush2{
+    left: 140px;
+    bottom: 65px;
+    width: 60px;
+    height: 80px;
+}
+
+.bush.bush3{
+    left: 250px;
+    bottom: 110px;
+    width: 40px;
+    height: 50px;
+    transform: rotate(-5deg);
 }
