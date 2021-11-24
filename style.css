@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 body{
-    height: 100vh;
-    background-image: linear-gradient(245deg,#5C97E7 0%,#B1D7F6 100%);
     overflow: hidden;
 }
 .landscape *, .landscape *::after,.landscape *::before{
@@ -20,6 +18,12 @@ body{
     box-shadow: -11px 13px 23px 3px rgba(231, 208, 73, 0.49), 1px 14px 23px -5px rgba(231, 208, 73, 0.49) inset;
     z-index: 1000;
 } */
+
+.landscape{
+    height: 100vh;
+    background-image: linear-gradient(225deg,#76AEF0 0%,#9ECEFC 100%);
+    overflow: hidden;
+}
 .house{
     bottom: 185px;
     left: 50%;
@@ -572,8 +576,8 @@ body{
     top: -29px;
     background-color: rgb(160, 157, 157);
     transform: skew(25deg) rotate(25deg);
-    z-index: -50;
     filter: brightness(0.8);
+    z-index: 10;
 }
 
 .foreyard .entry{
@@ -588,6 +592,16 @@ body{
     background-size: 15px 100%;
     z-index: 75;
 }
+.foreyard .wall5{
+    width: 119px;
+    height: 101px;
+    right: 334px;
+    top: -29px;
+    background-color: rgb(160, 157, 157);
+    transform: skew(-25deg) rotate(-25deg);
+    filter: brightness(0.8);
+    z-index: 10;
+}
 .foreyard .entry1{
     transform: rotateX(-13deg) rotateY(-35deg);
     transform-origin:left bottom;
@@ -596,16 +610,6 @@ body{
     left: 105px;
 
 } 
-.foreyard .wall5{
-    width: 119px;
-    height: 101px;
-    right: 334px;
-    top: -29px;
-    background-color: rgb(160, 157, 157);
-    transform: skew(-25deg) rotate(-25deg);
-    z-index: -50;
-    filter: brightness(0.8);
-}
 
 .yard{
     left: 50%;
@@ -628,9 +632,18 @@ body{
 }
 .lawn{
     width: 100vw;
-    height: 150px;
+    height: 25vh;
+    min-height: 180px;
     bottom: 0;
-    background-color: #9cb52b;
+    background-image: linear-gradient(to top,#91a925 0%, rgba(141, 252, 30, 0.92));
+    border-radius: 37% 37% 0% 61% / 5% 5% 0% 0% ;
+}
+.lawn::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(141, 252, 30, 0.92) 0%, transparent);
+    border-radius: 37% 37% 0% 61% / 5% 5% 0% 0% ;
 }
 .grass{
     left: 50%;
@@ -720,6 +733,7 @@ body{
 .bush{
     left: 50%;
     bottom: 70px;
+    z-index: 150;
 }
 .bush1{
     left: 20px;
@@ -911,4 +925,45 @@ body{
     border-radius: 66% 0% 0% 61% / 100% 100% 0% 0%  ;
     border-left: 15px #5e5037 solid;
     border-top: 10px #5e5037 solid;
+}
+.sun_sky{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.sunset{
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 90% 70%,
+                    rgba(254, 169, 0, 0.53) 0%, rgba(255, 170, 0, 0) 25%);
+    z-index: 1000;
+}
+.sun_sky::before{
+    content:'';
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 85% 80%, #ffd000 0%,#ffd000 5%, #ffd00000 70%);
+}
+.sun_sky .sun{
+    left: 85%;
+    bottom: 180px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #FDFFFD;
+    box-shadow: #FEFF00 0px 0px 10px 1px inset,
+                #FEFF00 0px 0px 20px 5px, 
+                #FEFF00 0px 0px 100px 5px;
+    filter: blur(0.2px);
+    z-index: 0;
+    /* animation: sun 40s ease-in-out infinite; */
+}
+
+@keyframes sun{
+    0%{
+        transform: translateY(-20vh);
+    }
+    100%{
+        transform: translateY(150vh);
+    }
 }
