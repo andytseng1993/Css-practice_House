@@ -8,6 +8,8 @@ body{
 }
 .landscape *, .landscape *::after,.landscape *::before{
     position: absolute;
+    user-select: none;
+    -webkit-user-select: none;
 }
 /* .light{
     width: 47px;
@@ -633,7 +635,7 @@ body{
 .lawn{
     width: 100vw;
     height: 25vh;
-    min-height: 180px;
+    min-height: 170px;
     bottom: 0;
     background-image: linear-gradient(to top,#91a925 0%, rgba(141, 252, 30, 0.92));
     border-radius: 37% 37% 0% 61% / 5% 5% 0% 0% ;
@@ -642,8 +644,9 @@ body{
     content: '';
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgba(141, 252, 30, 0.92) 0%, transparent);
+    background-image: linear-gradient(185deg,rgba(224, 255, 23, 0.892) 0%, transparent);
     border-radius: 37% 37% 0% 61% / 5% 5% 0% 0% ;
+    box-shadow: -12px 24px 31px -18px rgba(218, 247, 29, 0.892) inset;
 }
 .grass{
     left: 50%;
@@ -745,6 +748,7 @@ body{
     z-index: 150;
     border: 3px solid rgb(4, 124, 55);
     border-bottom: 4px solid rgb(4, 124, 55);
+    box-shadow: -7px 3px 15px -10px rgb(207, 255, 112) inset;
 }
 .bush1::before{
     content: '';
@@ -758,6 +762,8 @@ body{
     border-top: 3px solid rgb(4, 124, 55);
     border-left: 3px solid rgb(4, 124, 55);
     border-bottom: 3px solid rgb(4, 124, 55);
+    box-shadow: 10px -5px 8px -8px rgb(92, 111, 47) inset;
+    
 }
 .bush1::after{
     content: '';
@@ -767,8 +773,8 @@ body{
     height: 60%;
     background-color: rgb(6, 144, 65);
     border-radius: 63% 37% 69% 0% / 100% 36% 64% 0% ;
+    box-shadow: -9px 6px 11px -12px rgb(207, 255, 112) inset;
     border-right: 3px solid rgb(4, 124, 55);
-    border-bottom: 3px solid rgb(4, 124, 55);
 }
 .bush1 .twigs{
     width: 4px;
@@ -865,11 +871,13 @@ body{
     right: 460px;
     z-index: 500;
     width: 135px;
-    height: 100px;
+    height: 101px;
     background-color: rgb(74, 198, 50);
     border-radius: 50%;
     box-shadow: 65px 39px 0px -7px rgb(74, 198, 50), 
-                -46px 29px 0px -6px rgb(75, 198, 50);
+                -46px 29px 0 -6px rgb(73, 174, 53),
+                33px 5px 22px -3px rgb(73, 174, 53) inset;
+
 
     
 }
@@ -881,8 +889,9 @@ body{
     top: 100px;
     background-color: rgb(73, 174, 53);
     border-radius: 50%;
-    box-shadow: 92px 5px 0px -11px rgb(73, 174, 53),
-                -70px -15px 0px -6px  rgb(73, 174, 53);
+    box-shadow: 92px 5px 0px -11px rgb(74, 198, 50),
+                -70px -15px 0px -6px  rgb(73, 174, 53),
+                -40px -2px 27px -5px rgb(74, 198, 50) inset;
 }
 .tree .leaves::after{
     content: '';
@@ -903,10 +912,11 @@ body{
     right: 520px;
     bottom: -150px;
     border-radius: 5% 56% 0% 100% / 58% 100% 0% 0% ;
+    box-shadow: 11px 6px 15px -9px rgba(60, 42, 4, 0.7) inset;
 }
 .tree .branches::before{
     content: '';
-    width: 102px;
+    width: 137px;
     height: 158px;
     top: 62px;
     right: 23px;
@@ -914,6 +924,7 @@ body{
     border-radius: 0% 100% 0% 50% / 17% 100% 0% 97% ;
     border-right: 25px #5e5037 solid;
     border-top: 10px #5e5037 solid;
+    
 }
 .tree .branches::after{
     content: '';
@@ -937,16 +948,39 @@ body{
     background-image: radial-gradient(circle at 90% 70%,
                     rgba(254, 169, 0, 0.53) 0%, rgba(255, 170, 0, 0) 25%);
     z-index: 1000;
+    /* animation: sunset 60s linear both; */
+    opacity: 0;
+}
+@keyframes sunset{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    35%{
+        opacity: 1;
+    }
+    45%{
+        opacity: 1;
+    }
+    55%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
 }
 .sun_sky::before{
     content:'';
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(circle at 85% 80%, #ffd000 0%,#ffd000 5%, #ffd00000 70%);
+    background-image: radial-gradient(circle at 85% 80%, #ffea00 0%,#ffc400 5%, #f5bc0000 20%) ,
+                    linear-gradient(to top, #FFB654 0%,#ffaa3a 25%, #d6ebff93 65%,#d6ebff00);
+    animation: sunset 50s linear infinite;
 }
 .sun_sky .sun{
     left: 85%;
-    bottom: 180px;
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -956,14 +990,67 @@ body{
                 #FEFF00 0px 0px 100px 5px;
     filter: blur(0.2px);
     z-index: 0;
-    /* animation: sun 40s ease-in-out infinite; */
+    animation: sun 50s Ease-out infinite;
 }
 
 @keyframes sun{
     0%{
-        transform: translateY(-20vh);
+        transform: translateY(-100vh);
+    }
+    50%{
+        transform: translateY(80vh);
     }
     100%{
-        transform: translateY(150vh);
+        transform: translateY(80vh);
+    }
+}
+.morning{
+    transform: translate(-50%);
+    left: 50%;
+    top: 8%;
+    display: flex;
+    letter-spacing: 2px;
+    font-size: 8rem;
+    font-weight: 900;
+    font-family: DIN Condensed,sans-serif;
+}
+.morning span{
+    position: relative;
+    background-image: linear-gradient(to bottom,white 0%,white 20%,#76AEF0 150%);
+    background-clip: text;
+    color: transparent;
+    animation: fade 50s ease-in-out infinite, shadow 50s ease-in-out 0s infinite;
+    opacity: 0;
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+        filter: drop-shadow(-5px 5px 2px rgba(0, 0, 0, 0.16));
+    }
+    2%{
+        opacity: 1;
+        filter: drop-shadow(-10px 0px 2px rgba(0, 0, 0, 0.16));
+    }
+    43%{
+        opacity: 1;
+        filter: drop-shadow(-20px -10px 2px rgba(0, 0, 0, 0.16));
+    }
+    45%{
+        opacity: 0;
+        filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.16));
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes shadow{
+    0%{
+        filter: drop-shadow(-5px 5px 2px rgba(0, 0, 0, 0.0));
+    }
+    30%{
+        filter: drop-shadow(-5px 5px 2px rgba(0, 0, 0, 0.4));
+    }
+    40%{
+        filter: drop-shadow(-5px 5px 2px rgba(0, 0, 0, 0.2));
     }
 }
