@@ -11,25 +11,154 @@ body{
     user-select: none;
     -webkit-user-select: none;
 }
-/* .light{
-    width: 47px;
-    height: 53px;
-    left: 216px;
-    top: 188px;
-    background-color: rgba(255, 183, 88, 0.461);
-    box-shadow: -11px 13px 23px 3px rgba(231, 208, 73, 0.49), 1px 14px 23px -5px rgba(231, 208, 73, 0.49) inset;
+.light{
+    left: 50%;
+    bottom: 185px;
     z-index: 1000;
-} */
+}
+.light_window{
+    top: -248px;
+    right: 165px;
+    width: 47px;
+    height: 56px;
+    background-color: #dbdfba68;
+    box-shadow: -11px 13px 23px 3px rgba(213, 181, 139, 0.49), 1px 14px 23px -5px rgba(228, 189, 139, 0.49) inset;
+    opacity: 0;
+    animation: light_win 50s linear infinite;
+    border-radius: 3px;
+}
+@keyframes light_win {
+    0%{
+        opacity: 0;
+    }
+    49%{
+        opacity: 0;
+    }
+    49.1%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    80.5%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.light_door{
+    top: -95px;
+    right: 130px;
+    width: 44px;
+    height: 12px;
+    background-image: linear-gradient(to right, #F9FDD5 43%, #523838 43%, #523838 55%, #F9FDD5 55%);
+    border: 1px solid #523838;
+    border-radius: 45% / 50% 50% 0% 0%;
+    background-size: 33% 100%;
+    box-shadow: -4px 6px 18px 2px rgba(233, 200, 157,0.6),0px 9px 10px -3px rgba(255, 171, 171, 0.7) inset;
+    opacity: 0;
+    animation: light_door 50s linear infinite;
+}
+.light_door2{
+    top: -95px;
+    right: -174.5px;
+    opacity: 0;
+    animation: light_door 50s linear infinite;
+}
+@keyframes light_door {
+    0%{
+        opacity: 0;
+    }
+    45%{
+        opacity: 0;
+    }
+    45.1%{
+        opacity: 1;
+    }
+    98%{
+        opacity: 1;
+    }
+    98.1%{
+        opacity: 0;
+    }
+}
+.light_bigwindow{
+    top: -55px;
+    right: -109.5px;
+    width: 110px;
+    height: 51px;
+    background-color: hsla(66, 91%, 91%, 0.7);
+    transform: translate(-50%,-50%);
+    border-radius: 0px 0px 0px 0px;
+    border-bottom: transparent;
+    box-shadow: -11px 6px 31px -2px rgba(249, 253, 213, 0.8),0 9px 15px -2px rgba(249, 253, 213,0.6) inset;
+    opacity: 0;
+    animation: light_light_bigwindow 50s linear infinite;
+}
+.light_bigwindow::after{
+    content: '';
+    width: 100%;
+    height: 100.5%;
+    background-image: linear-gradient(to left, transparent 47%,#847F79 47%, #847F79 52%, transparent 52%);
+    opacity: 0;
+    animation: light_light_bigwindow 50s linear infinite;
+}
+@keyframes light_light_bigwindow {
+    0%{
+        opacity: 0;
+    }
+    53%{
+        opacity: 0;
+    }
+    53.2%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    70.3%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
 
 .landscape{
     height: 100vh;
     overflow: hidden;
 }
+.ground{
+    width: 100vw;
+    height: 100vh;
+    animation: dark 50s linear infinite;
+}
+@keyframes dark {
+    0%{
+        filter: brightness(1);
+    }
+    47%{
+        filter: brightness(1);
+    }
+    57%{
+        filter: brightness(0.5);
+    }
+    65%{
+        filter: brightness(0.4);
+    }
+    95%{
+        filter: brightness(0.4);
+    }
+    100%{
+        filter: brightness(1);
+    }
+}
+
 .house{
     bottom: 185px;
     left: 50%;
     transform: translate(-50%);
-    /* filter: drop-shadow(10px 10px 25px #0000003e) brightness(0.4); */
     z-index: 50;
 }
 
@@ -232,11 +361,29 @@ body{
     content: '';
     width: 85%;
     height: 100%;
-    left: 5%;
+    left: 50%;
     background-color: rgb(155, 141, 141);
     border-radius:10% 0% 13% 19% / 0% 4% 95% 100%;
+    transform: translate(-50%);
+    animation: pullCurtain 50s linear infinite;
 }
-
+@keyframes pullCurtain {
+    0%{
+        width: 85%;
+    }
+    50%{
+        width: 85%;
+    }
+    53%{
+        width: 0%;
+    }
+    97%{
+        width: 0%;
+    }
+    100%{
+        width: 85%;
+    }
+}
 
 /* Second floor */
 
@@ -437,6 +584,7 @@ body{
 .foreyard{
     left: 50%;
     bottom: 205px;
+
 }
 .foreyard .path{
     left: -210px;
@@ -636,7 +784,7 @@ body{
     height: 25vh;
     min-height: 170px;
     bottom: 0;
-    background-image: linear-gradient(to top,#91a925 0%, rgba(141, 252, 30, 0.92));
+    background-image: linear-gradient(to top,#91a925 0%, rgba(141, 252, 30, 1));
     border-radius: 37% 37% 0% 61% / 5% 5% 0% 0% ;
 }
 .lawn::after{
@@ -646,6 +794,7 @@ body{
     background-image: linear-gradient(185deg,rgba(224, 255, 23, 0.892) 0%, transparent);
     border-radius: 37% 37% 0% 61% / 5% 5% 0% 0% ;
     box-shadow: -12px 24px 31px -18px rgba(218, 247, 29, 0.892) inset;
+    animation: sunset 50s linear infinite;
 }
 .grass{
     left: 50%;
@@ -945,8 +1094,7 @@ body{
 .sunset{
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(circle at 90% 70%,
-                    rgba(254, 169, 0, 0.002) 0%,rgba(254, 169, 0, 0.53) 10% rgba(255, 170, 0, 0) 25%);
+    background-image: radial-gradient(circle at 90% 75%,#e8743500 0%,#e8743500 3%,#e8743537 7% ,rgba(255, 170, 0, 0) 25%);
     z-index: 1000;
     animation: sunset 50s linear infinite;
     opacity: 0;
@@ -975,8 +1123,8 @@ body{
     content:'';
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(circle at 85% 80%, #ffea00 0%,#ffc400 5%, #f5bc0000 20%) ,
-                    linear-gradient(to top, #FFB654 0%,#ffaa3a 25%, #d6ebff93 65%,#d6ebff00);
+    background-image: radial-gradient(circle at 85% 80%, #ffea00 0%,#ffc400cd 10%, #f5bc0000 30%) ,
+                    linear-gradient(to top, #FFB654 0%,#ffc13aba 25%, #d6ebff93 65%,#d6ebff00);
     animation: sunset 50s linear infinite;
 }
 .sun_sky .sun{
@@ -1075,10 +1223,10 @@ body{
     55%{
         opacity: 1;
     }
-    95%{
+    94%{
         opacity: 1;
     }
-    100%{
+    99%{
         opacity: 0;
     }
 }
@@ -1086,7 +1234,7 @@ body{
     content: '';
     width: 100%;
     height: 100%;
-    background-color: #1f1e2b;
+    background-image: linear-gradient(to bottom,#1f1e2b 0%,#37354a 100%);
     opacity: 0;
     animation: nightSky 50s ease-in-out infinite;
 }
@@ -1100,8 +1248,11 @@ body{
     70%{
         opacity: 1;
     }
-    100%{
+    96%{
         opacity: 1;
+    }
+    100%{
+        opacity: 0;
     }
 }
 .night span{
@@ -1113,7 +1264,30 @@ body{
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #FDFFFD;
+    background-color: #ebe2e2;
     z-index: 0;
+    box-shadow: -8px -9px 7px -1px rgb(255, 255, 255) inset,15px 14px 13px -4px rgb(209, 196, 196) inset;
     animation: sun 50s Ease-out infinite reverse;
+}
+.moon_sky .moon::before{
+    content: '';
+    left: 65%;
+    top: 10%;
+    width: 26%;
+    height: 24%;
+    transform: translate(-50%) rotate(-10deg);
+    background-color: #bdb6b1ff;
+    border-radius: 52% 48% 47% 53% / 37% 46% 54% 63%;
+    filter: drop-shadow(-38px 44px 0px rgb(181, 174, 174));
+}
+.moon_sky .moon::after{
+    content: '';
+    left: 20%;
+    top: 30%;
+    width: 10%;
+    height: 10%;
+    transform: translate(-50%) rotate(-10deg);
+    background-color: #bdb6b1ff;
+    border-radius: 66% 34% 60% 40% / 53% 64% 36% 47% ;
+    box-shadow: 50px 30px 0px 6px rgb(211, 200, 200);
 }
