@@ -1164,6 +1164,7 @@ body{
     font-size: 8rem;
     font-weight: 900;
     font-family: DIN Condensed,sans-serif;
+    z-index: 100;
 }
 .morning span,.night span{
     position: relative;
@@ -1267,6 +1268,7 @@ body{
     background-size: contain;
     animation: nightSky 50s ease-in-out infinite;
 }
+
 .night span{
     animation: fade 50s ease-in-out -2s infinite reverse, shadow 50s ease-in-out 0s infinite reverse;
     z-index: 500;
@@ -1305,4 +1307,59 @@ body{
     background-color: #bdb6b1ff;
     border-radius: 66% 34% 60% 40% / 53% 64% 36% 47% ;
     box-shadow: 50px 30px 0px 6px rgb(211, 200, 200);
+}
+.cloud{
+    top: 200px;
+    left: -400px;
+    width: 300px;
+    height: 60px;
+    border-radius: 47% 53% 62% 38% / 53% 48% 52% 47% ;
+    opacity: 0.9;
+    z-index: 5;
+    animation: dark 50s linear infinite, cloudMove 100s ease-in-out -2s infinite,cloudColor 50s linear infinite;
+}
+@keyframes cloudMove {
+    0%{
+        transform: translate(0px);
+    }
+    100%{
+        transform: translate(150vw);
+    }
+}
+@keyframes cloudColor {
+    0%{
+        background-color: #C1DAF9;
+        box-shadow: 114px 4px 0 -9px #C1DAF9,-113px 4px 0 -9px #C1DAF9;
+    }
+    30%{
+        background-color: #C1DAF9;
+        box-shadow: 114px 4px 0 -9px #C1DAF9,-113px 4px 0 -9px #C1DAF9;
+    }
+    38%{
+        background-color: #9c9a9e;
+        box-shadow: 114px 4px 0 -9px #9E9A9D,-113px 4px 0 -9px #9c9a9e;
+    }
+    90%{
+        background-color: #9c9a9e;
+        box-shadow: 114px 4px 0 -9px #9E9A9D,-113px 4px 0 -9px #9c9a9e;
+    }
+    96%{
+        background-color: #C1DAF9;
+        box-shadow: 114px 4px 0 -9px #C1DAF9,-113px 4px 0 -9px #C1DAF9;
+    }
+    100%{
+        background-color: #C1DAF9;
+        box-shadow: 114px 4px 0 -9px #C1DAF9,-113px 4px 0 -9px #C1DAF9;
+    }
+}
+
+.cloud2{
+    top: 330px;
+    left: -300px;
+    width: 200px;
+    height: 50px;
+    border-radius: 47% 53% 62% 38% / 53% 48% 52% 47% ;
+    opacity: 0.6;
+    z-index: 5;
+    animation: dark 50s linear infinite, cloudMove 70s ease-in-out -5s infinite,cloudColor 50s linear infinite;
 }
