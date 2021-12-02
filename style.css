@@ -6,6 +6,40 @@
 body{
     overflow: hidden;
 }
+:root{
+    --roof:#676d88;
+    --hip:#fffce5b3;
+    --hip_shadow:#874c00d4;
+    --chimney:#e1e3ec;
+    --chimney_top:#5A4C3E;
+    --win_frame: #bd917f;
+    --win_curtain:#bbb;
+    --win_curtain2:#ccc;
+    --front_win_frame: #a63102;
+    --front_win_curtain:#999;
+    --black: #000;
+    --white:#fff;
+    --white1:#eee;
+    --secondfloor_front:#fff9f4;
+    --door_frame:#8c4040;
+    --door_white:#e6e6e6;
+    --cement:#FEEEB5;
+    --brick:#F7D3A4;
+    --wall_top:#5C544A;
+    --entry:#7A776D;
+    --grass_color:#147d21;
+    --grass_color2:#148336;
+    --bush_color:#069041;
+    --bush_border_color:#047c37;
+    --bush_twigs:#111;
+    --tree_leaves_light:#4ac632;
+    --tree_leaves_dark:#49ae35;
+    --tree_left_leaves:#1e9335;
+    --tree_branch:#5e5037;
+    --tree_branch_dark:#3c2a04b3;
+    --cloud_light_color:#C1DAF9;
+    --cloud_dark_color:#9c9a9e;
+}
 .landscape *, .landscape *::after,.landscape *::before{
     position: absolute;
     user-select: none;
@@ -22,7 +56,7 @@ body{
     width: 47px;
     height: 56px;
     background-color: #dbdfba68;
-    box-shadow: -11px 13px 23px 3px rgba(213, 181, 139, 0.49), 1px 14px 23px -5px rgba(228, 189, 139, 0.49) inset;
+    box-shadow: -11px 13px 23px 3px #d5b58b7d, 1px 14px 23px -5px #e4bd8b7d inset;
     opacity: 0;
     animation: light_win 50s linear infinite;
     border-radius: 3px;
@@ -56,7 +90,7 @@ body{
     border: 1px solid #523838;
     border-radius: 45% / 50% 50% 0% 0%;
     background-size: 33% 100%;
-    box-shadow: -4px 6px 18px 2px rgba(233, 200, 157,0.6),0px 9px 10px -3px rgba(255, 171, 171, 0.7) inset;
+    box-shadow: -4px 6px 18px 2px #e9c89d99,0px 9px 10px -3px #ffababb3 inset;
     opacity: 0;
     animation: light_door 50s linear infinite;
 }
@@ -88,11 +122,11 @@ body{
     right: -109.5px;
     width: 110px;
     height: 51px;
-    background-color: hsla(66, 91%, 91%, 0.7);
+    background-color: #f9fdd3b3;
     transform: translate(-50%,-50%);
     border-radius: 0px 0px 0px 0px;
     border-bottom: transparent;
-    box-shadow: -11px 6px 31px -2px rgba(249, 253, 213, 0.8),0 9px 15px -2px rgba(249, 253, 213,0.6) inset;
+    box-shadow: -11px 6px 31px -2px #f9fdd5cc,0 9px 15px -2px #f9fdd599 inset;
     opacity: 0;
     animation: light_light_bigwindow 50s linear infinite;
 }
@@ -174,7 +208,7 @@ body{
     position: relative;
     width: 500px;
     height: 120px;
-    background: #eee;
+    background: var(--white1);
     left: 50%;
     transform: translate(-50%);
     
@@ -182,115 +216,104 @@ body{
 .house .first .main{
     width: 200px;
     height: 120px;
-    background: rgb(255, 255, 255);
+    background: var(--white);
     top: 60px;
     left: 50%;
     transform: translate(-50%);
     z-index: 100;
 }
-.house .first .main::before{
+.house .first .main::before,
+.house .first .main::after{
     content: '';
     top: -60px;
     left: 2.5%;
     width: 60%;
     height: 60px;
-    background: #676d88;
+    background: var(--roof);
     transform: skewX(320deg);
-    background-image: linear-gradient(to top,transparent 40%,rgb(0, 0, 0,0.7) 47%,rgb(0, 0, 0,0.7) 55%,transparent 57%);
+    background-image: linear-gradient(to top,transparent 40%,#000000b3 47%,#000000b3 55%,transparent 57%);
     background-size: 100% 6px;
-    box-shadow: 6px 0px 0px rgba(135, 76, 0, 0.83) inset;
-    border-left:rgba(255, 252, 229, 0.66) 3px solid;
+    box-shadow: 6px 0px 0px #874c00cc inset;
+    border-left: var(--hip) 3px solid;
 }
 .house .first .main::after{
-    content: '';
-    top: -60px;
+    left: initial;
     right: 2.5%;
-    width: 60%;
-    height: 60px;
-    background: #676d88;
     transform: skewX(40deg);
-    background-image: linear-gradient(to top,transparent 40%,rgb(0, 0, 0,0.7) 47%,rgb(0, 0, 0,0.7) 55%,transparent 57%);
-    background-size: 100% 6px;
-    box-shadow: -6px 0px 0px rgba(135, 76, 0, 0.83) inset;
-    border-right: rgba(255, 252, 229, 0.66) 3px solid;
+    box-shadow: -6px 0px 0px var(--hip_shadow) inset;
+    border-left: none;
+    border-right: var(--hip) 3px solid;
 }
 
 .house .first .leftside{
     width: 150px;
     height: 120px;
-    background: rgb(255, 255, 255);
+    background: var(--white);
     top: 55px;
     left: -1%;
     z-index: 100;
 }
-.house .first .leftside::before{
+.house .first .leftside::before,
+.house .first .leftside::after{
     content: '';
     top: -55px;
     left: 0%;
     width: 60%;
     height: 55px;
-    background: #676d88;
+    background: var(--roof);
     transform: skewX(330deg);
-    background-image: linear-gradient(to top,transparent 40%,rgb(0, 0, 0,0.7) 47%,rgb(0, 0, 0,0.7) 55%,transparent 57%);
+    background-image: linear-gradient(to top,transparent 40%,#000000b3 47%,#000000b3 55%,transparent 57%);
     background-size: 100% 6px;
-    box-shadow: 6px 0px 0px rgba(135, 76, 0, 0.83) inset;
-    border-left:rgba(255, 252, 229, 0.66) 3px solid;
+    box-shadow: 6px 0px 0px var(--hip_shadow) inset;
+    border-left:var(--hip) 3px solid;
 }
 .house .first .leftside::after{
-    content: '';
-    top: -55px;
+    left: initial;
     right: 9%;
     width: 60%;
-    height: 55px;
-    background: #676d88;
     transform: skewX(45deg);
-    background-image: linear-gradient(to top,transparent 40%,rgb(0, 0, 0) 47%,rgb(0, 0, 0) 55%,transparent 57%);
-    background-size: 100% 6px;
-    box-shadow: -6px 0px 0px rgba(135, 76, 0, 0.83) inset;
-    border-right: rgba(255, 252, 229, 0.66) 3px solid;
-    
+    background-image: linear-gradient(to top,transparent 40%,var(--black) 47%,var(--black) 55%,transparent 57%);
+    box-shadow: -6px 0px 0px var(--hip_shadow) inset;
+    border-left: none;
+    border-right: var(--hip) 3px solid;
 }
 .house .first .rightside{
     width: 150px;
     height: 120px;
-    background: rgb(255, 255, 255);
+    background: var(--white);
     top: 55px;
     right: -11%;
     transform: translate(-50%);
     z-index: 100;
 }
-.house .first .rightside::before{
+.house .first .rightside::before,
+.house .first .rightside::after{
     content: '';
     top: -55px;
     right: 0%;
     width: 60%;
     height: 55px;
-    background: #676d88;
+    background: var(--roof);
     transform: skewX(30deg);
-    background-image: linear-gradient(to top,transparent 40%,rgb(0, 0, 0) 40%,rgb(0, 0, 0) 55%,transparent 57%);
+    background-image: linear-gradient(to top,transparent 40%,var(--black) 40%,var(--black) 55%,transparent 57%);
     background-size: 100% 6px;
-    box-shadow: -6px 0px 0px rgba(135, 76, 0, 0.83) inset;
-    border-right: rgba(255, 252, 229, 0.66) 3px solid;
+    box-shadow: -6px 0px 0px var(--hip_shadow) inset;
+    border-right: var(--hip) 3px solid;
 }
 .house .first .rightside::after{
-    content: '';
-    top: -55px;
+    right: initial;
     left: 9%;
-    width: 60%;
-    height: 55px;
-    background: #676d88;
     transform: skewX(315deg);
-    background-image: linear-gradient(to top,transparent 40%,rgb(0, 0, 0) 40%,rgb(0, 0, 0) 55%,transparent 57%);
-    background-size: 100% 6px;
-    box-shadow: 6px 0px 0px rgba(135, 76, 0, 0.83) inset;
-    border-left:rgba(255, 252, 229, 0.66) 3px solid;
+    box-shadow: 6px 0px 0px var(--hip_shadow) inset;
+    border-right: none;
+    border-left: var(--hip) 3px solid;
 }
 .house .first .door{
     width: 60px;
     height: 100px;
     bottom: 0;
     left: 24%;
-    background-color: rgb(140, 64, 64);
+    background-color: var(--door_frame);
     border-radius: 3px;
     z-index: 100;
 }
@@ -300,9 +323,9 @@ body{
     left: 13%;
     width: 74%;
     height: 75%;
-    background-color: rgb(230, 230, 230);
-    background-image: linear-gradient(to left, #fff 20%, transparent 20%, transparent  75%, #fff 75%),
-    linear-gradient(to bottom, #fff 15%, transparent 15%, transparent  85%, #fff 85%);
+    background-color: var(--door_white);
+    background-image: linear-gradient(to left, var(--white) 20%, transparent 20%, transparent  75%, var(--white) 75%),
+    linear-gradient(to bottom, var(--white) 15%, transparent 15%, transparent  85%, var(--white) 85%);
     background-size: 50% 50%;
     border-radius: 2px;
 }
@@ -312,15 +335,14 @@ body{
     left: 13%;
     width: 70%;
     height: 10%;
-    background-image: linear-gradient(to right, #523838 45%, #eee 45%, #eee 50%, #523838 50%);
-    border: 1px solid rgb(255, 255, 255);
+    background-image: linear-gradient(to right, #523838 45%, var(--white1) 45%, var(--white1) 50%, #523838 50%);
+    border: 1px solid var(--white);
     border-radius: 45% / 50% 50% 0% 0%;
     background-size: 33% 100%;
 }
 .house .first .door2{
     left: 67.5%;
 }
-
 .house .firstroof{
     position: relative;
     width: 500px;
@@ -328,44 +350,44 @@ body{
     top: 0px;
     left: 50%;
     transform: translate(-50%);
-    background: #676d88;
-    background-image: linear-gradient(to top,transparent 40%,rgb(0, 0, 0) 47%,rgb(0, 0, 0) 55%,transparent 57%);
+    background: var(--roof);
+    background-image: linear-gradient(to top,transparent 40%,#000000 47%,#000000 55%,transparent 57%);
     background-size: 100% 6px;
 }
 
 .first .bigwindow{
     width: 110px;
     height: 80px;
-    background-color: #bbb;
+    background-color: var(--win_curtain);
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    border: 15px solid #bd917f;
+    border: 15px solid var(--win_frame);
     border-radius: 50% / 15%;
-    box-shadow: inset 3px 3px 8px #0000004d, 5px 3px 4px rgba(0, 0, 0, 0.13);
+    box-shadow: inset 3px 3px 8px #6346464d, 5px 3px 4px #0000001a;
 }
 .first .bigwindow1{
     width: 140px;
     height: 90px;
-    border: 15px solid #bd917f;
-    background-color: rgb(225, 225, 225);
+    border: 15px solid var(--win_frame);
+    background-color: #e1e1e1;
 }
 .first .bigwindow::after{
     content: '';
-    border: 3px solid #fff;
+    border: 3px solid var(--white);
     width: 100%;
     height: 100%;
     top: -3px;
     left: -3px;
     border-radius: 3px;
-    background-image: linear-gradient(to left, transparent 48%,#fff 48%, #fff 52%, transparent 52%);
+    background-image: linear-gradient(to left, transparent 48%,var(--white) 48%, var(--white) 52%, transparent 52%);
 }
 .first .bigwindow1::before{
     content: '';
     width: 85%;
     height: 100%;
     left: 50%;
-    background-color: rgb(155, 141, 141);
+    background-color: #9b8d8d;
     border-radius:10% 0% 13% 19% / 0% 4% 95% 100%;
     transform: translate(-50%);
     animation: pullCurtain 50s linear infinite;
@@ -395,7 +417,7 @@ body{
     left: 1%;
     width: 680px;
     height: 90px;
-    background: #eee;
+    background: var(--white1);
 }
 .house .secondroof{
     position: relative;
@@ -404,43 +426,37 @@ body{
     top: 0vh;
     
 }
-.house .secondroof:before{
+.house .secondroof:before,
+.house .secondroof:after{
     content: '';
     top: 0;
     left: 6%;
     width: 60%;
     height: 100%;
-    background: #676d88;
+    background: var(--roof);
     transform: skewX(295deg);
-    background-image: linear-gradient(to bottom,transparent 40%, rgb(26, 26, 0) 40%,#2D0A04 50%,transparent 65%,transparent );
+    background-image: linear-gradient(to bottom,transparent 40%, #1a1a00 40%,#2D0A04 50%,transparent 65%,transparent );
     background-size: 100% 7%;
     box-shadow: inset 9px 3px 0px #7E7977, 
-                inset 0px -1px 0px black,
-                6.5px 3px 0px #fff;      
+                inset 0px -1px 0px var(--black),
+                6.5px 3px 0px var(--white);      
     border-radius: 10px;
     z-index: 100;
 }
 .house .secondroof:after{
-    content: '';
-    top: 0;
+    left: initial;
     right: 6%;
     width: 55%;
-    height: 100%;
-    background: #676d88;
     transform: skewX(65deg);
-    background-image:linear-gradient(to bottom,transparent 40%, rgb(26, 26, 0) 40%,#2D0A04 50%,transparent 65%,transparent );
-    background-size: 100% 7%;
     box-shadow: inset -9px 3px 0px #7E7977, 
-                inset -5px -1px 0px black,
-                0.7px 3px 0 white;
-    border-radius: 10px;
-    z-index: 100;
+                inset -5px -1px 0px var(--black),
+                0.7px 3px 0 var(--white);
 }
 
 .house .secondfloor .front{
     width: 120px;
     height: 90px;
-    background-color: #fff9f4;
+    background-color: var(--secondfloor_front);
     z-index: 150;
     left: 14%;
 }
@@ -456,24 +472,24 @@ body{
     height: 66px;
     top: -37px;
     left: 21px;
-    background-color: #fff9f4;
+    background-color: var(--secondfloor_front);
     transform: rotate(32deg) skew(-29deg);
     border: transparent 2px solid;
     border-top: #574343 5px solid;
     border-left: #2c2c2c 6px solid;
-    box-shadow: inset 5px 5px 0px #fff;
+    box-shadow: inset 5px 5px 0px var(--white);
     border-radius: 6px;
 }
 
 .house .secondfloor .front > .window{
     width: 65px;
     height: 75px;
-    background-color: #999;
+    background-color: var(--front_win_curtain);
     left: 50%;
     top: 45%;
     transform: translate(-50%,-50%);
     border-radius: 50% 50% 3% 3% / 10% 10% 3% 3%;
-    border: 10px solid #a63102;
+    border: 10px solid var(--front_win_frame);
     box-shadow: inset 3px 3px 8px #0000004d, 5px 3px 4px rgba(0, 0, 0, 0.13);
 }
 .house .secondfloor .front > .window::before{
@@ -482,10 +498,10 @@ body{
     left: -1px;
     width: 91%;
     height: 91%;
-    border: #eee 3px solid;
+    border: var(--white1) 3px solid;
     border-radius: 3px;
-    background-image: linear-gradient(to right,transparent 49%, rgba(255, 255, 255, 0.8) 49%, rgba(255, 255, 255, 0.8) 52%, transparent 52%),
-    linear-gradient(to top,transparent 40%, #ffffff 45%, rgb(255, 255, 255) 55%, transparent 53%);
+    background-image: linear-gradient(to right,transparent 49%, #ffffffcc 49%, #ffffffcc 52%, transparent 52%),
+    linear-gradient(to top,transparent 40%, var(--white) 45%, var(--white) 55%, transparent 53%);
 
 
 }
@@ -495,10 +511,10 @@ body{
     top: 50%;
     left: 48px;
     transform: translate(-50%,-50%);
-    background-color: #ccc;
-    border: #bd917f 10px solid;
+    background-color: var(--win_curtain2);
+    border: var(--win_frame) 10px solid;
     border-radius:3px;
-    box-shadow: inset 3px 3px 8px #0000004d, 5px 3px 4px rgba(0, 0, 0, 0.13);
+    box-shadow: inset 3px 3px 8px #0000004d, 5px 3px 4px #00000026;
 }
 .house .secondfloor .window.window2{
     left: initial;
@@ -512,8 +528,8 @@ body{
     height: 91%;
     border: ivory 2px solid;
     border-radius: 3px;
-    background-image: linear-gradient(to right,transparent 48%, rgb(255, 255, 255) 48%, rgb(255, 255, 255) 52%, transparent 53%),
-    linear-gradient(to top,transparent 47%, rgb(255, 255, 255) 47%, rgb(255, 255, 255) 53%, transparent 53%);
+    background-image: linear-gradient(to right,transparent 48%, var(--white) 48%, var(--white) 52%, transparent 53%),
+    linear-gradient(to top,transparent 47%, var(--white) 47%, var(--white) 53%, transparent 53%);
 }
 .house .secondfloor >.midwindow{
     top: 50%;
@@ -522,9 +538,9 @@ body{
     height: 55px;
     transform: translate(-50%,-50%);
     border-radius: 50% / 15%;
-    background-color: #bbb;
-    border: #bd917f 10px solid;
-    box-shadow: inset 3px 3px 8px #0000004d, 5px 3px 4px rgba(0, 0, 0, 0.13);
+    background-color: var(--win_curtain);
+    border: var(--win_frame) 10px solid;
+    box-shadow: inset 3px 3px 8px #0000004d, 5px 3px 4px #00000026;
 }
 .house .secondfloor .midwindow1{
     left: 61%;
@@ -537,7 +553,7 @@ body{
     height: 90%;
     border: ivory 3px solid;
     border-radius: 3px;
-    background-image: linear-gradient(to right,transparent 48%, rgb(255, 255, 255) 48%, rgb(255, 255, 255) 52%, transparent 54%);
+    background-image: linear-gradient(to right,transparent 48%, var(--white) 48%, var(--white) 52%, transparent 54%);
 }
 .house .secondfloor .chimney{
     width: 50px;
@@ -545,7 +561,7 @@ body{
     top: -90px;
     left: 50%;
     transform: translateX(-50%);
-    background: #e1e3ec;
+    background: var(--chimney);
     z-index: 150;
 }
 .house .chimney{
@@ -555,7 +571,7 @@ body{
     bottom: 0px;
     left: -1%;
     transform: translateX(-50%);
-    background: #e1e3ec;
+    background: var(--chimney);
     z-index: -2;
 }
 .house .chimney::before{
@@ -563,7 +579,7 @@ body{
     width: 100%;
     height: 20px;
     left: -14%;
-    border-top: 20px solid #5A4C3E;
+    border-top: 20px solid var(--chimney_top);
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
 }
@@ -605,14 +621,14 @@ body{
     height: 95px;
     transform: translate(-50%);
     background-image: 
-    linear-gradient(to top,transparent 40%, #FEEEB5 40%, #FEEEB5 50%,transparent 50%,transparent),
-    linear-gradient(to left, #FEEEB5 5%, transparent 5%,transparent),
-    linear-gradient(to top,transparent 50%, #F7D3A4 50%, #F7D3A4 90%,#FEEEB5 90%),
-    linear-gradient(to right,transparent 45%,#FEEEB5 45%, #FEEEB5 55%, transparent 55%),
-    linear-gradient(to bottom,transparent 50%, #F7D3A4 50%, #F7D3A4 100% ),
-    linear-gradient(to right,#F7D3A4 45%, transparent 45%, transparent 100%);
+    linear-gradient(to top,transparent 40%, var(--cement) 40%, var(--cement) 50%,transparent 50%,transparent),
+    linear-gradient(to left, var(--cement) 5%, transparent 5%,transparent),
+    linear-gradient(to top,transparent 50%, var(--brick) 50%, var(--brick) 90%,var(--cement) 90%),
+    linear-gradient(to right,transparent 45%,var(--cement) 45%, var(--cement) 55%, transparent 55%),
+    linear-gradient(to bottom,transparent 50%, var(--brick) 50%, var(--brick) 100% ),
+    linear-gradient(to right,var(--brick) 45%, transparent 45%, transparent 100%);
     background-size: 40px 20px;
-    border-top: 5px solid #5C544A;
+    border-top: 5px solid var(--wall_top);
 }
 .foreyard .wall1::before,
 .foreyard .wall1::after{
@@ -623,16 +639,16 @@ body{
     transform: translate(-50%);
     bottom: 1px;
     background-image: 
-    linear-gradient(to top,transparent 40%, #FEEEB5 40%, #FEEEB5 50%,transparent 50%,transparent),
-    linear-gradient(to left, #FEEEB5 5%, transparent 5%,transparent),
-    linear-gradient(to top,transparent 50%, #F7D3A4 50%, #F7D3A4 90%,#FEEEB5 90%),
-    linear-gradient(to right,transparent 45%,#FEEEB5 45%, #FEEEB5 55%, transparent 55%),
-    linear-gradient(to bottom,transparent 50%, #F7D3A4 50%, #F7D3A4 100% ),
-    linear-gradient(to right,#F7D3A4 45%, transparent 45%, transparent 100%);
+    linear-gradient(to top,transparent 40%, var(--cement) 40%, var(--cement) 50%,transparent 50%,transparent),
+    linear-gradient(to left, var(--cement) 5%, transparent 5%,transparent),
+    linear-gradient(to top,transparent 50%, var(--brick) 50%, var(--brick) 90%,var(--cement) 90%),
+    linear-gradient(to right,transparent 45%,var(--cement) 45%, var(--cement) 55%, transparent 55%),
+    linear-gradient(to bottom,transparent 50%, var(--brick) 50%, var(--brick) 100% ),
+    linear-gradient(to right,var(--brick) 45%, transparent 45%, transparent 100%);
     background-size: 35px 28px;
     background-position: 0px 14px;
     filter: brightness(0.95);
-    border-top: 15px double #5C544A;
+    border-top: 15px double var(--wall_top);
     border-radius: 2px 2px 0 0;
 }
 .foreyard .wall1::after{
@@ -666,14 +682,14 @@ body{
     bottom: 6px;
     transform: skewY(-11deg);
     background-image: 
-    linear-gradient(to top,transparent 40%, #FEEEB5 40%, #FEEEB5 50%,transparent 50%,transparent),
-    linear-gradient(to left, #FEEEB5 5%, transparent 5%,transparent),
-    linear-gradient(to top,transparent 50%, #F7D3A4 50%, #F7D3A4 90%,#FEEEB5 90%),
-    linear-gradient(to right,transparent 45%,#FEEEB5 45%, #FEEEB5 55%, transparent 55%),
-    linear-gradient(to bottom,transparent 50%, #F7D3A4 50%, #F7D3A4 100% ),
-    linear-gradient(to right,#F7D3A4 45%, transparent 45%, transparent 100%);
+    linear-gradient(to top,transparent 40%, var(--cement) 40%, var(--cement) 50%,transparent 50%,transparent),
+    linear-gradient(to left, var(--cement) 5%, transparent 5%,transparent),
+    linear-gradient(to top,transparent 50%, var(--brick) 50%, var(--brick) 90%,var(--cement) 90%),
+    linear-gradient(to right,transparent 45%,var(--cement) 45%, var(--cement) 55%, transparent 55%),
+    linear-gradient(to bottom,transparent 50%, var(--brick) 50%, var(--brick) 100% ),
+    linear-gradient(to right,var(--brick) 45%, transparent 45%, transparent 100%);
     background-size: 28px 20px;
-    border-top: 5px solid #5C544A;
+    border-top: 5px solid var(--wall_top);
 }
 .foreyard .wall2::after,
 .foreyard .wall3::after{
@@ -684,16 +700,16 @@ body{
     transform: translate(50%);
     bottom: -1px;
     background-image: 
-    linear-gradient(to top,transparent 40%, #FEEEB5 40%, #FEEEB5 50%,transparent 50%,transparent),
-    linear-gradient(to left, #FEEEB5 5%, transparent 5%,transparent),
-    linear-gradient(to top,transparent 50%, #F7D3A4 50%, #F7D3A4 90%,#FEEEB5 90%),
-    linear-gradient(to right,transparent 45%,#FEEEB5 45%, #FEEEB5 55%, transparent 55%),
-    linear-gradient(to bottom,transparent 50%, #F7D3A4 50%, #F7D3A4 100% ),
-    linear-gradient(to right,#F7D3A4 45%, transparent 45%, transparent 100%);
+    linear-gradient(to top,transparent 40%, var(--cement) 40%, var(--cement) 50%,transparent 50%,transparent),
+    linear-gradient(to left, var(--cement) 5%, transparent 5%,transparent),
+    linear-gradient(to top,transparent 50%, var(--brick) 50%, var(--brick) 90%,var(--cement) 90%),
+    linear-gradient(to right,transparent 45%,var(--cement) 45%, var(--cement) 55%, transparent 55%),
+    linear-gradient(to bottom,transparent 50%, var(--brick) 50%, var(--brick) 100% ),
+    linear-gradient(to right,var(--brick) 45%, transparent 45%, transparent 100%);
     background-size: 39px 33px;
     background-position: 1px 1px;
     filter: brightness(0.95);
-    border-top: 15px double #5C544A;
+    border-top: 15px double var(--wall_top);
     border-radius: 2px 2px 0 0;
 }
 .foreyard .wall3{
@@ -738,9 +754,9 @@ body{
     right: 105px;
     top: -31px;
     background-color: transparent;
-    border: #7A776D 4px solid;
+    border: var(--entry) 4px solid;
     border-radius: 50% 50% 0% 0% / 25% 25% 0% 0%;
-    background-image: linear-gradient(to left,transparent 40%, #7A776D 40%,#7A776D 60%,transparent 60%,transparent );
+    background-image: linear-gradient(to left,transparent 40%, var(--entry) 40%,var(--entry) 60%,transparent 60%,transparent );
     background-size: 15px 100%;
     z-index: 75;
 }
@@ -749,7 +765,7 @@ body{
     height: 101px;
     right: 334px;
     top: -29px;
-    background-color: rgb(160, 157, 157);
+    background-color: #a09d9d;
     transform: skew(-25deg) rotate(-25deg);
     filter: brightness(0.8);
     z-index: 10;
@@ -787,16 +803,16 @@ body{
     height: 25vh;
     min-height: 170px;
     bottom: 0;
-    background-image: linear-gradient(to top,#91a925 0%, rgba(141, 252, 30, 1));
+    background-image: linear-gradient(to top,#91a925 0%, #8dfc1e);
     border-radius: 37% 37% 0% 61% / 5% 5% 0% 0% ;
 }
 .lawn::after{
     content: '';
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(185deg,rgba(224, 255, 23, 0.892) 0%, transparent);
+    background-image: linear-gradient(185deg,#e0ff1ae3 0%, transparent);
     border-radius: 37% 37% 0% 61% / 5% 5% 0% 0% ;
-    box-shadow: -12px 24px 31px -18px rgba(218, 247, 29, 0.892) inset;
+    box-shadow: -12px 24px 31px -18px #daf71de3 inset;
     animation: sunset 50s linear infinite;
 }
 .grass{
@@ -806,7 +822,7 @@ body{
 .grass1{
     bottom: 24px;
     left: -60px;
-    filter: drop-shadow(150px 10px 0px rgb(42, 138, 77));
+    filter: drop-shadow(150px 10px 0px #2a8a4d);
 }
 .grass1 .part1{
     width: 6px;
@@ -814,8 +830,8 @@ body{
     background-color: transparent;
     z-index: 50;
     border-radius: 28% 76% 0% 0% / 0% 100% 0% 0% ;
-    border-right: 1px solid rgb(24, 121, 35);
-    box-shadow: rgb(24, 121, 35) 2px 0px 0px 0px;
+    border-right: 1px solid var(--grass_color);
+    box-shadow: var(--grass_color) 2px 0px 0px 0px;
 }
 .grass1 .part1::before{
     content: '';
@@ -823,7 +839,7 @@ body{
     width: 70%;
     left: 8px;
     bottom: 0;
-    background-color: rgb(20, 125, 33);
+    background-color: var(--grass_color);
     border-radius: 0% 100% 100% 0% / 100% 100% 0% 0% ;
 }
 .grass1 .part1::after{
@@ -833,7 +849,7 @@ body{
     left: 9px;
     bottom: 0;
     background-color: transparent;
-    border-right: 4px solid rgb(20, 125, 33);
+    border-right: 4px solid var(--grass_color);
     border-radius: 13% 87% 100% 0% / 100% 100% 0% 0% ;
 }
 .grass1 .part1.part2{
@@ -845,43 +861,43 @@ body{
     left: 300px;
     bottom: 20px;
     filter: hue-rotate(5deg);
-    filter: drop-shadow(250px -30px 0px rgb(12, 112, 40));
+    filter: drop-shadow(250px -30px 0px #0c7028);
 }
 .grass3{
     left: 375px;
     bottom: -20px;
     filter: hue-rotate(48deg);
-    filter: drop-shadow(-50px 15px 0px rgb(26, 94, 46));
+    filter: drop-shadow(-50px 15px 0px #1a5e2e);
 }
 .grass4{
     left: -375px;
     bottom: 5px;
     filter: hue-rotate(10deg);
-    filter: drop-shadow(130px -20px 0px rgb(20, 131, 54));
+    filter: drop-shadow(130px -20px 0px var(--grass_color2));
 }
 .grass5{
     left: -450px;
     bottom: -20px;
     filter: hue-rotate(70deg);
-    filter: drop-shadow(170px 20px 0px rgb(20, 131, 54));
+    filter: drop-shadow(170px 20px 0px var(--grass_color2));
 }
 .grass6{
     left: -500px;
     bottom:  20px;
     filter: hue-rotate(50deg);
-    filter: drop-shadow(-100px 20px 0px rgb(20, 131, 54));
+    filter: drop-shadow(-100px 20px 0px var(--grass_color2));
 }
 .grass7{
     left: 400px;
     bottom: 40px;
     filter: hue-rotate(100deg);
-    filter: drop-shadow(90px 50px 0px rgb(20, 131, 54));
+    filter: drop-shadow(90px 50px 0px var(--grass_color2));
 }
 .grass8{
     left: 10px;
     bottom:  -5px;
     filter: hue-rotate(20deg);
-    filter: drop-shadow(-100px 20px 0px rgb(26, 94, 46));
+    filter: drop-shadow(-100px 20px 0px #1a5e2e);
 }
 
 .bush{
@@ -894,12 +910,12 @@ body{
     bottom: 35px;
     width: 49px;
     height: 63px;
-    background-color: rgb(6, 144, 65);
+    background-color: var(--bush_color);
     border-radius: 63% 67% 57% 55% / 86% 79% 46% 39%;
     z-index: 150;
-    border: 3px solid rgb(4, 124, 55);
-    border-bottom: 4px solid rgb(4, 124, 55);
-    box-shadow: -7px 3px 15px -10px rgb(207, 255, 112) inset;
+    border: 3px solid var(--bush_border_color);
+    border-bottom: 4px solid var(--bush_border_color);
+    box-shadow: -7px 3px 15px -10px #cfff70 inset;
 }
 .bush1::before{
     content: '';
@@ -907,13 +923,13 @@ body{
     bottom: -4px;
     width: 55%;
     height: 45%;
-    background-color: rgb(6, 144, 65);
+    background-color: var(--bush_color);
     border-radius: 30% 73% 4% 89% / 28% 91% 0% 76%;
     border-right: 2px solid transparent;
-    border-top: 3px solid rgb(4, 124, 55);
-    border-left: 3px solid rgb(4, 124, 55);
-    border-bottom: 3px solid rgb(4, 124, 55);
-    box-shadow: 10px -5px 8px -8px rgb(92, 111, 47) inset;
+    border-top: 3px solid var(--bush_border_color);
+    border-left: 3px solid var(--bush_border_color);
+    border-bottom: 3px solid var(--bush_border_color);
+    box-shadow: 10px -5px 8px -8px #5c6f2f inset;
     
 }
 .bush1::after{
@@ -922,17 +938,17 @@ body{
     bottom: -4px;
     width: 80%;
     height: 60%;
-    background-color: rgb(6, 144, 65);
+    background-color: var(--bush_color);
     border-radius: 63% 37% 69% 0% / 100% 36% 64% 0% ;
-    box-shadow: -9px 6px 11px -12px rgb(207, 255, 112) inset;
-    border-right: 3px solid rgb(4, 124, 55);
+    box-shadow: -9px 6px 11px -12px #cfff70 inset;
+    border-right: 3px solid var(--bush_border_color);
 }
 .bush1 .twigs{
     width: 4px;
     height: 85%;
     left: 40%;
     bottom: -15%;
-    background-color: #111;
+    background-color: var(--bush_twigs);
     border-radius: 100% 0% 100% 0% / 100% 100% 0% 0%;
     z-index: 70;
  
@@ -943,7 +959,7 @@ body{
     left: initial;
     width: 4px;
     height: 55%;
-    background-color: #111;
+    background-color: var(--bush_twigs);
     transform-origin: bottom;
     transform: rotate(46deg);
     border-radius: 0% 100% 100% 0% / 100% 100% 0% 0% ;
@@ -953,7 +969,7 @@ body{
     bottom: 5px;
     width: 3px;
     height: 45%;
-    background-color: #111;
+    background-color: var(--bush_twigs);
     transform-origin: bottom;
     transform: rotate(-39deg);
     border-radius: 0% 100% 100% 0% / 100% 100% 0% 0% ;
@@ -1023,11 +1039,11 @@ body{
     z-index: 500;
     width: 135px;
     height: 101px;
-    background-color: rgb(74, 198, 50);
+    background-color: var(--tree_leaves_light);
     border-radius: 50%;
-    box-shadow: 65px 39px 0px -7px rgb(74, 198, 50), 
-                -46px 29px 0 -6px rgb(73, 174, 53),
-                33px 5px 22px -3px rgb(73, 174, 53) inset;
+    box-shadow: 65px 39px 0px -7px var(--tree_leaves_light), 
+                -46px 29px 0 -6px var(--tree_leaves_dark),
+                33px 5px 22px -3px var(--tree_leaves_dark) inset;
 
 
     
@@ -1038,11 +1054,11 @@ body{
     height: 90%;
     right: 10px;
     top: 100px;
-    background-color: rgb(73, 174, 53);
+    background-color: var(--tree_leaves_dark);
     border-radius: 50%;
-    box-shadow: 92px 5px 0px -11px rgb(74, 198, 50),
-                -70px -15px 0px -6px  rgb(73, 174, 53),
-                -40px -2px 27px -5px rgb(74, 198, 50) inset;
+    box-shadow: 92px 5px 0px -11px var(--tree_leaves_light),
+                -70px -15px 0px -6px  var(--tree_leaves_dark),
+                -40px -2px 27px -5px var(--tree_leaves_light) inset;
 }
 .tree .leaves::after{
     content: '';
@@ -1051,19 +1067,19 @@ body{
     right: 120px;
     top: 200px;
     border-radius: 50%;
-    background-color: rgb(30, 147, 53);
-    box-shadow: 36px 5px 0px -7px rgb(30, 147, 53),
-                -30px -0px 0px -6px  rgb(30, 147, 53);
+    background-color: var(--tree_left_leaves);
+    box-shadow: 36px 5px 0px -7px var(--tree_left_leaves),
+                -30px -0px 0px -6px  var(--tree_left_leaves);
 }
 .tree .branches{
     width: 40px;
     height: 230px;
     z-index: 400;
-    background-color: #5e5037;
+    background-color: var(--tree_branch);
     right: 520px;
     bottom: -150px;
     border-radius: 5% 56% 0% 100% / 58% 100% 0% 0% ;
-    box-shadow: 11px 6px 15px -9px rgba(60, 42, 4, 0.7) inset;
+    box-shadow: 11px 6px 15px -9px var(--tree_branch_dark) inset;
 }
 .tree .branches::before{
     content: '';
@@ -1073,8 +1089,8 @@ body{
     right: 23px;
     background-color:transparent;
     border-radius: 0% 100% 0% 50% / 17% 100% 0% 97% ;
-    border-right: 25px #5e5037 solid;
-    border-top: 10px #5e5037 solid;
+    border-right: 25px var(--tree_branch) solid;
+    border-top: 10px var(--tree_branch) solid;
     
 }
 .tree .branches::after{
@@ -1085,8 +1101,8 @@ body{
     left: 24px;
     background-color:transparent;
     border-radius: 66% 0% 0% 61% / 100% 100% 0% 0%  ;
-    border-left: 15px #5e5037 solid;
-    border-top: 10px #5e5037 solid;
+    border-left: 15px var(--tree_branch) solid;
+    border-top: 10px var(--tree_branch) solid;
 }
 .sun_sky{
     width: 100vw;
@@ -1164,11 +1180,10 @@ body{
     font-size: 8rem;
     font-weight: 900;
     font-family: DIN Condensed,sans-serif;
-    z-index: 100;
 }
 .morning span,.night span{
     position: relative;
-    background-image: linear-gradient(to bottom,white 0%,white 20%,#76AEF0 150%);
+    background-image: linear-gradient(to bottom,var(--white) 0%,var(--white) 20%,#76AEF0 150%);
     background-clip: text;
     color: transparent;
     animation: fade 50s ease-in-out infinite, shadow 50s ease-in-out 0s infinite;
@@ -1193,13 +1208,13 @@ body{
 }
 @keyframes shadow{
     0%{
-        filter: drop-shadow(-5px 5px 2px rgba(0, 0, 0, 0.0));
+        filter: drop-shadow(-5px 5px 2px #00000000);
     }
     30%{
-        filter: drop-shadow(-5px 5px 2px rgba(0, 0, 0, 0.4));
+        filter: drop-shadow(-5px 5px 2px #00000066);
     }
     40%{
-        filter: drop-shadow(-5px 5px 2px rgba(0, 0, 0, 0.2));
+        filter: drop-shadow(-5px 5px 2px #00000033);
     }
 }
 .moon_sky{
@@ -1280,13 +1295,14 @@ body{
     border-radius: 50%;
     background-color: #ebe2e2;
     z-index: 0;
-    box-shadow: -8px -9px 7px -1px rgb(255, 255, 255) inset,
-                15px 14px 13px -4px rgb(209, 196, 196) inset, 
-                0px 0px 35px 2px rgba(233, 228, 228, 0.5),
-                0px 0px 50px 2px rgba(223, 214, 214, 0.3);
+    box-shadow: -8px -9px 7px -1px var(--white) inset,
+                15px 14px 13px -4px #d1c4c4 inset, 
+                0px 0px 35px 2px #e9e4e480,
+                0px 0px 50px 2px #dfd6d64d;
     animation: sun 50s Ease-out infinite reverse;
 }
-.moon_sky .moon::before{
+.moon_sky .moon::before,
+.moon_sky .moon::after{
     content: '';
     left: 65%;
     top: 10%;
@@ -1295,18 +1311,16 @@ body{
     transform: translate(-50%) rotate(-10deg);
     background-color: #bdb6b1ff;
     border-radius: 52% 48% 47% 53% / 37% 46% 54% 63%;
-    filter: drop-shadow(-38px 44px 0px rgb(181, 174, 174));
+    filter: drop-shadow(-38px 44px 0px #b5aeae);
 }
 .moon_sky .moon::after{
-    content: '';
     left: 20%;
     top: 30%;
     width: 10%;
     height: 10%;
-    transform: translate(-50%) rotate(-10deg);
-    background-color: #bdb6b1ff;
     border-radius: 66% 34% 60% 40% / 53% 64% 36% 47% ;
-    box-shadow: 50px 30px 0px 6px rgb(211, 200, 200);
+    box-shadow: 50px 30px 0px 6px #d3c8c8;
+    filter: none;
 }
 .cloud{
     top: 200px;
@@ -1315,7 +1329,7 @@ body{
     height: 60px;
     border-radius: 47% 53% 62% 38% / 53% 48% 52% 47% ;
     opacity: 0.9;
-    z-index: 5;
+    z-index: 0;
     animation: dark 50s linear infinite, cloudMove 100s ease-in-out -2s infinite,cloudColor 50s linear infinite;
 }
 @keyframes cloudMove {
@@ -1328,28 +1342,28 @@ body{
 }
 @keyframes cloudColor {
     0%{
-        background-color: #C1DAF9;
-        box-shadow: 114px 4px 0 -9px #C1DAF9,-113px 4px 0 -9px #C1DAF9;
+        background-color: var(--cloud_light_color);
+        box-shadow: 114px 4px 0 -9px var(--cloud_light_color),-113px 4px 0 -9px var(--cloud_light_color);
     }
     30%{
-        background-color: #C1DAF9;
-        box-shadow: 114px 4px 0 -9px #C1DAF9,-113px 4px 0 -9px #C1DAF9;
+        background-color: var(--cloud_light_color);
+        box-shadow: 114px 4px 0 -9px var(--cloud_light_color),-113px 4px 0 -9px var(--cloud_light_color);
     }
     38%{
-        background-color: #9c9a9e;
-        box-shadow: 114px 4px 0 -9px #9E9A9D,-113px 4px 0 -9px #9c9a9e;
+        background-color: var(--cloud_dark_color);
+        box-shadow: 114px 4px 0 -9px var(--cloud_dark_color),-113px 4px 0 -9px var(--cloud_dark_color);
     }
     90%{
-        background-color: #9c9a9e;
-        box-shadow: 114px 4px 0 -9px #9E9A9D,-113px 4px 0 -9px #9c9a9e;
+        background-color: var(--cloud_dark_color);
+        box-shadow: 114px 4px 0 -9px var(--cloud_dark_color),-113px 4px 0 -9px var(--cloud_dark_color);
     }
     96%{
-        background-color: #C1DAF9;
-        box-shadow: 114px 4px 0 -9px #C1DAF9,-113px 4px 0 -9px #C1DAF9;
+        background-color: var(--cloud_light_color);
+        box-shadow: 114px 4px 0 -9px var(--cloud_light_color),-113px 4px 0 -9px var(--cloud_light_color);
     }
     100%{
-        background-color: #C1DAF9;
-        box-shadow: 114px 4px 0 -9px #C1DAF9,-113px 4px 0 -9px #C1DAF9;
+        background-color: var(--cloud_light_color);
+        box-shadow: 114px 4px 0 -9px var(--cloud_light_color),-113px 4px 0 -9px var(--cloud_light_color);
     }
 }
 
@@ -1360,6 +1374,6 @@ body{
     height: 50px;
     border-radius: 47% 53% 62% 38% / 53% 48% 52% 47% ;
     opacity: 0.6;
-    z-index: 5;
+    z-index: 0;
     animation: dark 50s linear infinite, cloudMove 70s ease-in-out -5s infinite,cloudColor 50s linear infinite;
 }
