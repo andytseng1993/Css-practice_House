@@ -1176,9 +1176,9 @@ body{
     left: 50%;
     top: 8%;
     display: flex; 
-    font-size: 8rem;
+    font-size: 175px;
     font-weight: 400;
-    font-family: DIN Condensed,'Teko',sans-serif;
+    font-family: 'DIN Condensed','Teko',sans-serif;
 }
 .morning span,.night span{
     position: relative;
