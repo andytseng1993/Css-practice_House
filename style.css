@@ -1175,11 +1175,10 @@ body{
     transform: translate(-50%);
     left: 50%;
     top: 8%;
-    display: flex;
-    letter-spacing: 2px;
+    display: flex; 
     font-size: 8rem;
-    font-weight: 900;
-    font-family: DIN Condensed,sans-serif;
+    font-weight: 400;
+    font-family: DIN Condensed,'Teko',sans-serif;
 }
 .morning span,.night span{
     position: relative;
