@@ -1185,6 +1185,8 @@ body{
     position: relative;
     background-image: linear-gradient(to bottom,var(--white) 0%,var(--white) 20%,#76AEF0 150%);
     background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     color: transparent;
     animation: fade 50s ease-in-out infinite, shadow 50s ease-in-out 0s infinite;
     opacity: 0;
